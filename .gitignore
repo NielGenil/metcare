@@ -97,3 +97,5 @@ env.bak/
 venv.bak/
 
 /media/
+.vercel
+.env*

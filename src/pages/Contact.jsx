@@ -4,7 +4,7 @@ import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
 import Textarea from "../components/ui/Textarea";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -25,31 +25,19 @@ function Contact() {
     e.preventDefault();
 
     try {
-      // Send to company
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      );
+        body: JSON.stringify(formData),
+      });
 
-      // Send auto-reply to customer
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      );
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
 
       alert("Message sent successfully!");
 
@@ -61,7 +49,7 @@ function Contact() {
       });
     } catch (error) {
       console.error(error);
-      alert("Failed to send message.");
+      alert(error.message || "Something went wrong.");
     }
   }
 
