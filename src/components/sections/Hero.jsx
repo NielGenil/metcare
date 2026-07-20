@@ -18,11 +18,11 @@ function Hero() {
               Trusted Biomedical Engineering Solutions
             </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-tight text-slate-900 lg:text-6xl">
+            <h1 className="mt-6 text-3xl font-bold leading-tight text-slate-900 lg:text-6xl">
               Keeping Healthcare Equipment Reliable and Ready
             </h1>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 sm:text-lg leading-8 text-slate-600">
               MetCare provides preventive maintenance, calibration, repair, and
               medical equipment solutions for hospitals, clinics, and healthcare
               facilities.
@@ -36,11 +36,11 @@ function Hero() {
               </Button>
             </div>
 
-            <div className="mt-10 space-y-3">
+            {/* <div className="mt-10 space-y-3">
               <p>✔ Preventive Maintenance</p>
               <p>✔ Calibration Services</p>
               <p>✔ Equipment Repair</p>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Content */}
