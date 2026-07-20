@@ -5,8 +5,11 @@ import Input from "../components/ui/Input";
 import Textarea from "../components/ui/Textarea";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { useState } from "react";
+import { useRef } from "react";
 
 function Contact() {
+  const turnstileRef = useRef();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,6 +29,10 @@ function Contact() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -40,9 +47,13 @@ function Contact() {
 
       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message);
+      if (response.status === 429) {
+        throw new Error(
+          "You've sent too many messages. Please wait a few minutes and try again.",
+        );
       }
+
+      throw new Error(data.message);
 
       alert("Message sent successfully!");
 
@@ -52,9 +63,15 @@ function Contact() {
         subject: "",
         message: "",
       });
+
+      setTurnstileToken("");
+
+      turnstileRef.current?.reset();
     } catch (error) {
       console.error(error);
       alert(error.message || "Something went wrong.");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -134,14 +151,19 @@ function Contact() {
             />
 
             <Turnstile
+              ref={turnstileRef}
               siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
               onSuccess={(token) => setTurnstileToken(token)}
               onExpire={() => setTurnstileToken("")}
               onError={() => setTurnstileToken("")}
             />
 
-            <Button disabled={!turnstileToken} type="submit" className="w-full">
-              Send Message
+            <Button
+              type="submit"
+              disabled={!turnstileToken || isSubmitting}
+              className="w-full"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
