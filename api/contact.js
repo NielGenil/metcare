@@ -1,7 +1,7 @@
 import { Resend } from "resend";
-import { ratelimit } from "../lib/rateLimit";
-import { adminEmail } from "../emails/adminEmail";
-import { autoReplyEmail } from "../emails/autoReplyEmail";
+import { ratelimit } from "../lib/rateLimit.js";
+import { adminEmail } from "../emails/adminEmail.js";
+import { autoReplyEmail } from "../emails/autoReplyEmail.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
