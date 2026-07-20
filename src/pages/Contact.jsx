@@ -10,6 +10,7 @@ import { useRef } from "react";
 function Contact() {
   const turnstileRef = useRef();
   const [website, setWebsite] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -49,13 +50,15 @@ function Contact() {
 
       const data = await response.json();
 
-      if (response.status === 429) {
-        throw new Error(
-          "You've sent too many messages. Please wait a few minutes and try again.",
-        );
-      }
+      if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error(
+            "You've sent too many messages. Please wait a few minutes and try again.",
+          );
+        }
 
-      throw new Error(data.message);
+        throw new Error(data.message || "Something went wrong.");
+      }
 
       alert("Message sent successfully!");
 
@@ -65,6 +68,8 @@ function Contact() {
         subject: "",
         message: "",
       });
+
+      setWebsite("");
 
       setTurnstileToken("");
 
