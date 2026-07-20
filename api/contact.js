@@ -1,63 +1,39 @@
 import { Resend } from "resend";
 import { ratelimit } from "../lib/rateLimit";
+import { adminEmail } from "../emails/adminEmail";
+import { autoReplyEmail } from "../emails/autoReplyEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-  // Only allow POST requests
-  const forwarded = req.headers["x-forwarded-for"];
-
-  const ip = Array.isArray(forwarded)
-    ? forwarded[0]
-    : forwarded?.split(",")[0].trim() ||
-      req.socket?.remoteAddress ||
-      "127.0.0.1";
-
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      success: false,
-      message: "Method Not Allowed",
-    });
-  }
-
-  const { success, reset } = await ratelimit.limit(ip);
-
-  if (!success) {
-    return res.status(429).json({
-      success: false,
-      message:
-        "Too many requests. Please wait a few minutes before trying again.",
-      retryAfter: reset,
-    });
-  }
-
   try {
-    const { name, email, subject, message, turnstileToken } = req.body;
-
-    // Basic validation
-    if (!name || !email || !subject || !message) {
-      return res.status(400).json({
+    // Only allow POST requests
+    if (req.method !== "POST") {
+      return res.status(405).json({
         success: false,
-        message: "All fields are required.",
+        message: "Method Not Allowed",
       });
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Get visitor IP
+    const forwarded = req.headers["x-forwarded-for"];
 
-    if (!emailRegex.test(email)) {
-      return res.status(400).json({
-        success: false,
-        message: "Please enter a valid email address.",
+    const ip = Array.isArray(forwarded)
+      ? forwarded[0]
+      : forwarded?.split(",")[0].trim() ||
+        req.socket?.remoteAddress ||
+        "127.0.0.1";
+
+    // Get form data
+    const { name, email, subject, message, turnstileToken, website } = req.body;
+
+    if (website) {
+      return res.status(200).json({
+        success: true,
       });
     }
 
-    if (!turnstileToken) {
-      return res.status(400).json({
-        success: false,
-        message: "CAPTCHA verification failed.",
-      });
-    }
-
+    // Check server configuration
     if (!process.env.RESEND_API_KEY) {
       return res.status(500).json({
         success: false,
@@ -71,7 +47,7 @@ export default async function handler(req, res) {
         message: "Contact email is missing.",
       });
     }
-  
+
     if (!process.env.TURNSTILE_SECRET_KEY) {
       return res.status(500).json({
         success: false,
@@ -79,6 +55,45 @@ export default async function handler(req, res) {
       });
     }
 
+    // Rate limit
+    const { success, reset } = await ratelimit.limit(ip);
+
+    if (!success) {
+      return res.status(429).json({
+        success: false,
+        message:
+          "Too many requests. Please wait a few minutes before trying again.",
+        retryAfter: Math.max(0, Math.ceil((reset - Date.now()) / 1000)),
+      });
+    }
+
+    // Required fields
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required.",
+      });
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({
+        success: false,
+        message: "Please enter a valid email address.",
+      });
+    }
+
+    // Turnstile token
+    if (!turnstileToken) {
+      return res.status(400).json({
+        success: false,
+        message: "CAPTCHA verification failed.",
+      });
+    }
+
+    // Verify Turnstile
     const verifyResponse = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
@@ -95,8 +110,6 @@ export default async function handler(req, res) {
 
     const verifyData = await verifyResponse.json();
 
-    const allowedHosts = ["localhost", "metcare-alpha.vercel.app"];
-
     if (!verifyData.success) {
       console.error("Turnstile verification failed:", verifyData);
 
@@ -105,6 +118,8 @@ export default async function handler(req, res) {
         message: "CAPTCHA verification failed.",
       });
     }
+
+    const allowedHosts = ["localhost", "metcare-alpha.vercel.app"];
 
     if (!allowedHosts.includes(verifyData.hostname)) {
       console.error("Unexpected Turnstile hostname:", verifyData.hostname);
@@ -115,27 +130,45 @@ export default async function handler(req, res) {
       });
     }
 
-    await resend.emails.send({
+    // Send email
+    const { error } = await resend.emails.send({
       from: "MetCare <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL, // Replace with your Gmail
+      to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `New Inquiry: ${subject}`,
-
-      html: `
-        <h2>New Contact Form Submission</h2>
-
-        <p><strong>Name:</strong> ${name}</p>
-
-        <p><strong>Email:</strong> ${email}</p>
-
-        <p><strong>Subject:</strong> ${subject}</p>
-
-        <p><strong>Message:</strong></p>
-
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
+      html: adminEmail({
+        name,
+        email,
+        subject,
+        message,
+      }),
     });
 
+    if (error) {
+      console.error(error);
+
+      return res.status(500).json({
+        success: false,
+        message: "Failed to send email.",
+      });
+    }
+
+    // Send confirmation email to the customer
+    const { error: autoReplyError } = await resend.emails.send({
+      from: "MetCare <onboarding@resend.dev>",
+      to: email,
+      subject: "We've received your inquiry",
+      html: autoReplyEmail({
+        name,
+        subject,
+      }),
+    });
+
+    if (autoReplyError) {
+      console.error("Auto reply failed:", autoReplyError);
+    }
+
+    // Return success AFTER both emails are sent
     return res.status(200).json({
       success: true,
       message: "Email sent successfully.",
@@ -145,7 +178,7 @@ export default async function handler(req, res) {
 
     return res.status(500).json({
       success: false,
-      message: "Failed to send email.",
+      message: "Internal server error.",
     });
   }
 }

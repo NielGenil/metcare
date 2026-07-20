@@ -9,6 +9,7 @@ import { useRef } from "react";
 
 function Contact() {
   const turnstileRef = useRef();
+  const [website, setWebsite] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -42,6 +43,7 @@ function Contact() {
         body: JSON.stringify({
           ...formData,
           turnstileToken,
+          website,
         }),
       });
 
@@ -117,7 +119,18 @@ function Contact() {
             onSubmit={handleSubmit}
             className="space-y-6 rounded-2xl border p-8 shadow-sm"
           >
+            <input
+              type="text"
+              name="website"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              autoComplete="off"
+              tabIndex="-1"
+              className="hidden"
+            />
+
             <Input
+              disabled={isSubmitting}
               label="Full Name"
               name="name"
               value={formData.name}
@@ -126,6 +139,7 @@ function Contact() {
             />
 
             <Input
+              disabled={isSubmitting}
               label="Email Address"
               type="email"
               name="email"
@@ -135,6 +149,7 @@ function Contact() {
             />
 
             <Input
+              disabled={isSubmitting}
               label="Subject"
               name="subject"
               value={formData.subject}
@@ -143,6 +158,7 @@ function Contact() {
             />
 
             <Textarea
+              disabled={isSubmitting}
               label="Message"
               name="message"
               value={formData.message}
@@ -152,6 +168,7 @@ function Contact() {
 
             <Turnstile
               ref={turnstileRef}
+              disabled={isSubmitting}
               siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
               onSuccess={(token) => setTurnstileToken(token)}
               onExpire={() => setTurnstileToken("")}
@@ -161,9 +178,33 @@ function Contact() {
             <Button
               type="submit"
               disabled={!turnstileToken || isSubmitting}
-              className="w-full"
+              className="w-full flex items-center justify-center gap-2"
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? (
+                <>
+                  <svg
+                    className="h-5 w-5 animate-spin"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      className="opacity-20"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    />
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
             </Button>
           </form>
         </div>
