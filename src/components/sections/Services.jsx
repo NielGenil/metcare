@@ -2,6 +2,7 @@ import Container from "../ui/Container";
 import services from "../../data/services";
 import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
+import Button from "../ui/Button";
 
 function Services() {
   return (
@@ -19,8 +20,8 @@ function Services() {
             description="We provide preventive maintenance, calibration, repair, installation, and technical support to help healthcare facilities keep their medical equipment operating safely and efficiently."
           />
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => {
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
+            {services.slice(0, 3).map((service) => {
               const Icon = service.icon;
               return (
                 <motion.div
@@ -43,6 +44,10 @@ function Services() {
                 </motion.div>
               );
             })}
+          </div>
+
+          <div className="w-full flex justify-center">
+            <Button to="/services">View more</Button>
           </div>
         </motion.div>
       </Container>
