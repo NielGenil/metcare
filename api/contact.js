@@ -1,6 +1,12 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const apiKey = typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : null;
+
+if (!apiKey) {
+  console.error("Resend API Key is missing from environment variables.");
+}
+
+const resend = new Resend(apiKey);
 
 export default async function handler(req, res) {
   // Only allow POST requests

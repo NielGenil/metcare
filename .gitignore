@@ -88,6 +88,8 @@ db.sqlite3-journal
 __pypackages__/
 
 # Environments
+.env.local
+env.local/
 .env
 .venv
 env/
@@ -99,3 +101,4 @@ venv.bak/
 /media/
 .vercel
 .env*
+.env.local*
