@@ -3,8 +3,8 @@ import SectionHeader from "../components/ui/SectionHeader";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
 import Textarea from "../components/ui/Textarea";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { useState } from "react";
-
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -13,6 +13,8 @@ function Contact() {
     subject: "",
     message: "",
   });
+
+  const [turnstileToken, setTurnstileToken] = useState("");
 
   function handleChange(e) {
     setFormData({
@@ -30,7 +32,10 @@ function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken,
+        }),
       });
 
       const data = await response.json();
@@ -128,7 +133,14 @@ function Contact() {
               placeholder="Write your message..."
             />
 
-            <Button type="submit" className="w-full">
+            <Turnstile
+              siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+              onSuccess={(token) => setTurnstileToken(token)}
+              onExpire={() => setTurnstileToken("")}
+              onError={() => setTurnstileToken("")}
+            />
+
+            <Button disabled={!turnstileToken} type="submit" className="w-full">
               Send Message
             </Button>
           </form>
