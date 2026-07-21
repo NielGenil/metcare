@@ -47,7 +47,7 @@ function Services() {
           </div>
 
           <div className="w-full flex justify-center">
-            <Button to="/services">View more</Button>
+            <Button to="/services">Learn more</Button>
           </div>
         </motion.div>
       </Container>

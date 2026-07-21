@@ -5,7 +5,9 @@ import Container from "../ui/Container";
 
 function Hero() {
   return (
-    <section className="bg-gradient-to-b from-green-50 to-white py-20 lg:py-28">
+    <section className="relative bg-[url('/images/hero-bg.jpg')] bg-cover bg-center py-20 lg:py-28">
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-black/40"></div>
+      <div className="relative z-10">
       <Container>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
@@ -14,18 +16,16 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-flex rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+            {/* <span className="inline-flex rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
               Trusted Biomedical Engineering Solutions
-            </span>
+            </span> */}
 
-            <h1 className="mt-6 text-3xl font-bold leading-tight text-slate-900 lg:text-6xl">
-              Keeping Healthcare Equipment Reliable and Ready
+            <h1 className="mt-6 text-3xl font-bold leading-tight text-white lg:text-6xl">
+              Your Partner in Quality Health Care Delivery
             </h1>
 
-            <p className="mt-6 sm:text-lg leading-8 text-slate-600">
-              MetCare provides preventive maintenance, calibration, repair, and
-              medical equipment solutions for hospitals, clinics, and healthcare
-              facilities.
+            <p className="mt-6 sm:text-lg leading-8 text-gray-300">
+              Trusted biomedical service provider since 2015 - ISO-certified and specialized in calibration and repair
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -44,7 +44,7 @@ function Hero() {
           </motion.div>
 
           {/* Right Content */}
-          <motion.div
+          {/* <motion.div
             className="flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -57,9 +57,10 @@ function Hero() {
                 className="w-full max-w-lg rounded-2xl object-cover"
               />
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </Container>
+      </div>
     </section>
   );
 }

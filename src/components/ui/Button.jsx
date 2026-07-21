@@ -10,13 +10,13 @@ function Button({
   disabled = false,
 }) {
   const variants = {
-    primary: "bg-green-600 text-white hover:bg-green-700",
+    primary: "bg-emerald-600 text-white hover:bg-green-700",
     secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",
     outline:
       "border border-green-600 text-green-600 hover:bg-green-600 hover:text-white",
   };
 
-  const classes = `inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium transition ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-full px-5 py-3 font-medium transition ${variants[variant]} ${className}`;
 
   if (to) {
     return (
