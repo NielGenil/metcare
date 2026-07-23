@@ -18,7 +18,7 @@ function Input({
       <input
         id={name}
         type={type}
-        name={name}
+        name={name} 
         value={value}
         onChange={onChange}
         placeholder={placeholder}

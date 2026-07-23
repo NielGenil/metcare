@@ -30,7 +30,7 @@ function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-300 border-b border-gray-200 ${
         isScrolled ? "bg-white/95 shadow-md backdrop-blur" : "bg-white"
       }`}
     >
@@ -75,7 +75,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="border-t py-6 md:hidden">
+          <div className="pb-6 md:hidden">
             <div className="flex flex-col gap-5">
               {links.map((link) => (
                 <NavLink

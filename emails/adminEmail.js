@@ -66,7 +66,7 @@ A visitor submitted the contact form.
 </tr>
 
 <tr>
-<td><strong>Subject</strong></td>
+<td><strong>Number</strong></td>
 <td>${subject}</td>
 </tr>
 

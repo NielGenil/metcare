@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
-
+import logo from "../../assets/images/logo.jpg";
 import Container from "../ui/Container";
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-emerald-600 to-emerald-700 text-white border-t border-emerald-700">
+    <footer className="bg-gradient-to-b from-emerald-800 to-teal-950 text-white border-t border-emerald-700">
       <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5 sm:px-40 p-10">
         {/* Company */}
         <div>
-          <h2 className="text-2xl font-bold text-white">MetCare</h2>
+          <img src={logo} alt="MetCare" className="sm:h-10  h-9" />
+          {/* <h2 className="text-2xl font-bold text-white">MetCare</h2> */}
 
           <p className="mt-2 text-teal-400">Biomedical Corporation</p>
 

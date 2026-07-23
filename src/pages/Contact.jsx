@@ -6,6 +6,9 @@ import Textarea from "../components/ui/Textarea";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { useState } from "react";
 import { useRef } from "react";
+import { FaEnvelope } from "react-icons/fa6";
+import { CgLock } from "react-icons/cg";
+import { FaClock } from "react-icons/fa";
 
 function Contact() {
   const turnstileRef = useRef();
@@ -83,47 +86,58 @@ function Contact() {
   }
 
   return (
-    <section className="py-24">
-      <Container>
+    <section className="pb-24">
+      <section className="py-24 bg-gradient-to-b from-teal-50 to-white">
         <SectionHeader
-          badge="Contact Us"
           title="Let's Discuss Your Healthcare Equipment Needs"
           description="Have questions or need a quotation? Send us a message and our team will get back to you as soon as possible."
         />
+      </section>
+
+      <div className="overflow-hidden shadow-sm mt-10">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.0840866595327!2d121.07457169999999!3d14.306546899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d79898932e1f%3A0x1e0676f1660ced59!2sMETCARE%20Biomedical%20Corporation!5e0!3m2!1sen!2sph!4v1784788020003!5m2!1sen!2sph"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+          title="MetCare Location"
+        />
+      </div>
+
+      <Container>
+        {/* Contact Information */}
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="rounded-2xl border p-6">
-              <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="mt-2 text-slate-600">+63 912 345 6789</p>
-            </div>
-
-            <div className="rounded-2xl border p-6">
-              <h3 className="text-xl font-semibold">Email</h3>
-              <p className="mt-2 text-slate-600">info@metcare.com</p>
-            </div>
-
-            <div className="rounded-2xl border p-6">
-              <h3 className="text-xl font-semibold">Office</h3>
-              <p className="mt-2 text-slate-600">
-                Santa Rosa City, Laguna, Philippines
-              </p>
-            </div>
-
-            <div className="rounded-2xl border p-6">
-              <h3 className="text-xl font-semibold">Business Hours</h3>
-              <p className="mt-2 text-slate-600">Monday - Friday</p>
-
-              <p className="text-slate-600">8:00 AM - 5:00 PM</p>
+          <div className="sm:mt-15 space-y-12">
+            <SectionHeader
+              badge="Contact Us"
+              title="We Offer 24/7 Emergency Service To All of Our Customers"
+              description="Because healthcare never stops, neither do we. Our dedicated biomedical team is available around the clock to respond to urgent service calls, equipment breakdowns, and critical technical issues. With fast response times and expert care, we make sure your medical equipment is always ready when lives depend on it."
+              center={false}
+            />
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="space-y-2">
+                <div className="flex gap-2 items-center">
+                  <FaEnvelope className="text-emerald-600 text-xl" />
+                  <h2 className="text-lg font-semibold">Email</h2>
+                </div>
+                <p className="text-emerald-600">metcare.biomedical@gmail.com</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex gap-2 items-center">
+                  <FaClock className="text-emerald-600 text-xl" />
+                  <h2 className="text-lg font-semibold">Open Hours</h2>
+                </div>
+                <p className="">Mon-Sat: 8am-5pm</p>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6 rounded-2xl border p-8 shadow-sm"
-          >
+          <form onSubmit={handleSubmit} className="space-y-6">
             <input
               type="text"
               name="website"
@@ -155,11 +169,11 @@ function Contact() {
 
             <Input
               disabled={isSubmitting}
-              label="Subject"
+              label="Number"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              placeholder="How can we help?"
+              placeholder="e.g. XXX-XXXX-XXX"
             />
 
             <Textarea
@@ -178,6 +192,11 @@ function Contact() {
               onSuccess={(token) => setTurnstileToken(token)}
               onExpire={() => setTurnstileToken("")}
               onError={() => setTurnstileToken("")}
+              style={{
+                width: 50,
+                transform: "scale(0.9)",
+                transformOrigin: "left top",
+              }}
             />
 
             <Button
