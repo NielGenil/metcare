@@ -1,8 +1,8 @@
-import FeaturedProducts from "../components/sections/FeaturedProducts";
-import Hero from "../components/sections/Hero";
-import Process from "../components/sections/Process";
-import Services from "../components/sections/Services";
-import WhyChooseUs from "../components/sections/WhyChooseUs";
+import FeaturedProducts from "../components/homeSections/FeaturedProducts";
+import Hero from "../components/homeSections/Hero";
+import Process from "../components/homeSections/Process";
+import Services from "../components/homeSections/Services";
+import WhyChooseUs from "../components/homeSections/WhyChooseUs";
 
 function Home() {
   return (

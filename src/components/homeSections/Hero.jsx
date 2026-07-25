@@ -1,4 +1,3 @@
-import heroImage from "../../assets/images/hero-image.jpg";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
 import Container from "../ui/Container";

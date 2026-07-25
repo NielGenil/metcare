@@ -6,44 +6,48 @@ import {
   FaTruckMedical,
   FaUserDoctor,
 } from "react-icons/fa6";
+import { IoMdSettings } from "react-icons/io";
+import { FaDraftingCompass } from "react-icons/fa";
+import { MdManageAccounts } from "react-icons/md";
+
 
 const services = [
   {
-    title: "Preventive Maintenance",
+    title: "Biomedical Engineering",
     description:
-      "Routine inspections and maintenance to ensure medical equipment performs safely and reliably.",
-    icon: FaScrewdriverWrench,
+      "Our engineers use calibrated tools and expert training to deliver reliable, high-quality service.",
+    icon: IoMdSettings,
   },
   {
     title: "Calibration Services",
     description:
-      "Accurate calibration of medical devices following industry standards and best practices.",
-    icon: FaHeartPulse,
+      "We provide accurate, expert-driven calibration to keep your equipment performing at its best.",
+    icon: FaDraftingCompass,
   },
   {
-    title: "Equipment Repair",
+    title: "Asset Management",
     description:
-      "Fast and reliable repair services to minimize equipment downtime.",
-    icon: FaScrewdriverWrench,
+      "We support your hospital in managing equipment use and maintenance every day with our on-site services.",
+    icon: MdManageAccounts,
   },
-  {
-    title: "Installation & Commissioning",
-    description:
-      "Professional installation and testing of medical equipment before operation.",
-    icon: FaHospital,
-  },
-  {
-    title: "Medical Equipment Supply",
-    description:
-      "Supply of quality medical devices and healthcare equipment for hospitals and clinics.",
-    icon: FaTruckMedical,
-  },
-  {
-    title: "Technical Support",
-    description:
-      "Responsive technical assistance and consultation for healthcare facilities.",
-    icon: FaUserDoctor,
-  },
+  // {
+  //   title: "Installation & Commissioning",
+  //   description:
+  //     "Professional installation and testing of medical equipment before operation.",
+  //   icon: FaHospital,
+  // },
+  // {
+  //   title: "Medical Equipment Supply",
+  //   description:
+  //     "Supply of quality medical devices and healthcare equipment for hospitals and clinics.",
+  //   icon: FaTruckMedical,
+  // },
+  // {
+  //   title: "Technical Support",
+  //   description:
+  //     "Responsive technical assistance and consultation for healthcare facilities.",
+  //   icon: FaUserDoctor,
+  // },
 ];
 
 export default services;
