@@ -16,8 +16,8 @@ function Services() {
         >
           <SectionHeader
             badge="Our Services"
-            title="Comprehensive Biomedical Engineering Solutions"
-            description="We provide preventive maintenance, calibration, repair, installation, and technical support to help healthcare facilities keep their medical equipment operating safely and efficiently."
+            title="Complete biomedical care maintenance, calibration, and support to keep your equipment reliable."
+            description="We provide preventive maintenance, calibration, repair, and installation to help healthcare facilities keep their medical equipment operating safely and efficiently."
           />
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">

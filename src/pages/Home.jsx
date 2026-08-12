@@ -3,11 +3,13 @@ import Hero from "../components/homeSections/Hero";
 import Process from "../components/homeSections/Process";
 import Services from "../components/homeSections/Services";
 import WhyChooseUs from "../components/homeSections/WhyChooseUs";
+import CompanyIntroduction from "../components/homeSections/CompanyIntroduction";
 
 function Home() {
   return (
     <>
       <Hero />
+      <CompanyIntroduction />
       <Services />
       <WhyChooseUs />
       <FeaturedProducts />

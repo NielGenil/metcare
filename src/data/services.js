@@ -9,26 +9,27 @@ import {
 import { IoMdSettings } from "react-icons/io";
 import { FaDraftingCompass } from "react-icons/fa";
 import { MdManageAccounts } from "react-icons/md";
+import { BsFillClipboard2CheckFill } from "react-icons/bs";
 
 
 const services = [
   {
     title: "Biomedical Engineering",
     description:
-      "Our engineers use calibrated tools and expert training to deliver reliable, high-quality service.",
+      "Expert engineering solutions covering the installation, preventive maintenance, and repair of medical, dental, and laboratory equipment to ensure optimal performance and safety.",
     icon: IoMdSettings,
   },
   {
     title: "Calibration Services",
     description:
-      "We provide accurate, expert-driven calibration to keep your equipment performing at its best.",
+      "Precision testing and adjustment of medical devices and tools to guarantee accurate readings, reliable operation, and strict regulatory compliance.",
     icon: FaDraftingCompass,
   },
   {
-    title: "Asset Management",
+    title: "Training Consultancy",
     description:
-      "We support your hospital in managing equipment use and maintenance every day with our on-site services.",
-    icon: MdManageAccounts,
+      "Professional guidance and hands-on training to empower hospital staff in operating, maintaining, and managing biomedical equipment efficiently and safely.",
+    icon: BsFillClipboard2CheckFill ,
   },
   // {
   //   title: "Installation & Commissioning",
