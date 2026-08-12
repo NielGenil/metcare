@@ -9,8 +9,8 @@ function FeaturedProducts() {
       <Container>
         <SectionHeader
           badge="Featured Products"
-          title="Medical Equipment"
-          description="Explore some of the quality medical equipment we provide to hospitals, clinics, and healthcare facilities."
+          title="Equip Your Facility"
+          description="Explore some of the quality equipment we provide to hospitals, clinics, and healthcare facilities."
         />
 
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

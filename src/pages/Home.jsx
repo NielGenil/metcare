@@ -11,9 +11,9 @@ function Home() {
       <Hero />
       <CompanyIntroduction />
       <Services />
-      <WhyChooseUs />
       <FeaturedProducts />
-      <Process />
+      <WhyChooseUs />
+      {/* <Process /> */}
     </>
   );
 }
