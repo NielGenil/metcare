@@ -1,15 +1,15 @@
 const products = [
   {
     name: "Diagnostic Imaging",
-    image: "/images/products/patient-monitor.jpg",
+    image: "/images/products/diagnostic-imaging.jpg",
   },
   {
     name: "Sterilization Assurance & Supplies",
-    image: "/images/products/ecg-machine.jpg",
+    image: "/images/products/sterilization.jpg",
   },
   {
     name: "Critical Care & Monitoring",
-    image: "/images/products/defibrillator.jpg",
+    image: "/images/products/monitor.jpg",
   },
 ];
 

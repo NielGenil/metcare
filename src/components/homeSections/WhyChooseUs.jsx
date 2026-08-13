@@ -8,10 +8,9 @@ import SectionHeader from "../ui/SectionHeader";
 import { FaUserCheck } from "react-icons/fa";
 import { MdHealthAndSafety, MdQuickreply } from "react-icons/md";
 
-
 function WhyChooseUs() {
   return (
-    <section className="bg-slate-100 py-24">
+    <section className="bg-slate-50/50 py-24">
       <Container>
         <motion.div
           initial={{ opacity: 0, x: 60 }}
@@ -20,16 +19,13 @@ function WhyChooseUs() {
           transition={{ duration: 0.8 }}
         >
           <SectionHeader
-                badge="Why Choose Us"
-                title="Trusted Healthcare Engineering Partner"
-                description="We help hospitals, laboratories, and healthcare facilities maintain safe, accurate, and reliable medical equipment through professional biomedical engineering solutions."
-                // center={false}
-              />
+            badge="Why Choose Us"
+            title="Trusted Healthcare Engineering Partner"
+            description="We help hospitals, laboratories, and healthcare facilities maintain safe, accurate, and reliable medical equipment through professional biomedical engineering solutions."
+            // center={false}
+          />
 
-
-
-
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-10">
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2 mb-10">
             {whyChooseUs.map((service) => {
               const Icon = service.icon;
               return (
@@ -39,24 +35,27 @@ function WhyChooseUs() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="space-y-3 border rounded-md p-5 border-slate-300 bg-white"
+                  className="grid grid-cols-1 sm:grid-cols-[2fr_4fr] items-center gap-5 border rounded-md p-5 border-slate-300 bg-white"
                 >
-                  <div className="flex gap-2 items-center">
-                  <div className="inline-flex rounded-xl bg-teal-100 p-3 text-lg text-teal-600">
-                    <Icon />
+                  <div className="flex items-center justify-center sm:h-30 h-25">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="h-full w-full object-contain"
+                  />
                   </div>
 
-                  <h3 className="font-semibold text-slate-900">
-                    {service.title}
-                  </h3>
-                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold text-slate-900">
+                      {service.title}
+                    </h3>
 
-                  <p className="mt-3 text-slate-600">{service.description}</p>
+                    <p className="mt-3 text-slate-600">{service.description}</p>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
-
         </motion.div>
       </Container>
     </section>

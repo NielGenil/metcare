@@ -8,28 +8,32 @@ import { FaCircleCheck, FaScrewdriverWrench } from "react-icons/fa6";
 
 const whyChooseUs = [
   {
-    title: "Comprehensive Equipment Maintenance",
+    title: "ISO Certified",
     description:
-      "Regular preventive maintenance and servicing to keep medical devices operating safely, efficiently, and in compliance with healthcare standards.",
-    icon: FaScrewdriverWrench,
+      "Certified in ISO 9001:2015, proving our commitment to international quality standards, reliable service, and customer satisfaction.",
+    name: "iso",
+    image: "/images/whyChooseUs/iso.jpg",
   },
   {
-    title: "Calibration Services",
+    title: "Certification Partner Global",
     description:
-      "Expert testing and adjustments to keep your critical medical devices accurate, safe, and audit-ready every time.",
-    icon: FaDraftingCompass,
+      "Certified by Certification Partner Global, verifying that our biomedical services meet the highest global safety and quality standards.",
+    name: "cpg",
+    image: "/images/whyChooseUs/cpg.jpg",
   },
   {
-    title: "Training Consultancy",
+    title: "International Accreditation Forum",
     description:
-      "Professional training and guidance for biomedical equipment operations to maximize safety and ensure efficiency.",
-    icon: BsFillClipboard2CheckFill,
+      "Accredited under the IAF framework, ensuring our quality, safety, and compliance standards are recognized and trusted worldwide.",
+    name: "iaf",
+    image: "/images/whyChooseUs/iaf.jpg",
   },
   {
-    title: "Training Consultancy",
+    title: "Joint Accreditation System of Australia and New Zealand",
     description:
-      "Professional training and guidance for biomedical equipment operations to maximize safety and ensure efficiency.",
-    icon: BsFillClipboard2CheckFill,
+      "Accredited by JAS-ANZ, offering independent verification of our technical competence and service reliability.",
+    name: "jas-anz",
+    image: "/images/whyChooseUs/jas-anz.jpg",
   },
 ];
 
