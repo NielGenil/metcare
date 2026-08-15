@@ -1,12 +1,7 @@
-import { FaCircleCheck, FaScrewdriverWrench } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
-
 import whyChooseUs from "../../data/whyChooseUs";
-import whyImage from "../../assets/images/why-choose-us.jpg";
 import SectionHeader from "../ui/SectionHeader";
-import { FaUserCheck } from "react-icons/fa";
-import { MdHealthAndSafety, MdQuickreply } from "react-icons/md";
 
 function WhyChooseUs() {
   return (
@@ -27,7 +22,7 @@ function WhyChooseUs() {
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2 mb-10">
             {whyChooseUs.map((service) => {
-              const Icon = service.icon;
+          
               return (
                 <motion.div
                   key={service.title}
@@ -38,15 +33,16 @@ function WhyChooseUs() {
                   className="grid grid-cols-1 sm:grid-cols-[2fr_4fr] items-center gap-5 border rounded-md p-5 border-slate-300 bg-white"
                 >
                   <div className="flex items-center justify-center sm:h-30 h-25">
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="h-full w-full object-contain"
-                  />
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="h-full w-full object-contain"
+                    />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <h3 className="font-semibold text-slate-900">
+                    
+                    <h3 className="text-lg font-semibold text-slate-900">
                       {service.title}
                     </h3>
 

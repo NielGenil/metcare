@@ -28,26 +28,34 @@ function FeaturedProducts() {
           transition={{ duration: 0.6 }}
         >
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((product) => (
-              <div
-                key={product.name}
-                className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-64 w-full object-cover"
-                />
+            {products.map((product) => {
+              const Icon = product.icon;
+              return (
+                <div
+                  key={product.name}
+                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-64 w-full object-cover"
+                  />
 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2">
+                    <div className="inline-flex rounded-xl bg-teal-100 p-2 text-2xl text-teal-600">
+                      <Icon />
+                    </div>
+                    <h3 className="text-xl font-semibold">{product.name}</h3>
+                    </div>
 
-                  <Button to="/products" className="mt-6 w-full">
-                    Learn More
-                  </Button>
+                    <Button to="/products" className="mt-6 w-full">
+                      Learn More
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </motion.div>
       </Container>

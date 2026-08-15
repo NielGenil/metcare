@@ -1,11 +1,3 @@
-import { IoMdSettings } from "react-icons/io";
-import { FaDraftingCompass } from "react-icons/fa";
-import { BsFillClipboard2CheckFill } from "react-icons/bs";
-
-import { FaUserCheck } from "react-icons/fa";
-import { MdHealthAndSafety, MdQuickreply } from "react-icons/md";
-import { FaCircleCheck, FaScrewdriverWrench } from "react-icons/fa6";
-
 const whyChooseUs = [
   {
     title: "ISO Certified",
