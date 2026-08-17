@@ -1,5 +1,5 @@
 import Container from "../ui/Container";
-import services from "../../data/services";
+import servicesHome from "../../data/servicesHome";
 import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
@@ -22,7 +22,7 @@ function Services() {
         </motion.div>
 
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
-          {services.slice(0, 3).map((service) => {
+          {servicesHome.slice(0, 3).map((service) => {
             const Icon = service.icon;
             return (
               <motion.div

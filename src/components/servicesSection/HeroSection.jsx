@@ -7,7 +7,7 @@ function HeroSection() {
   return (
     <section className="bg-gradient-to-b from-green-50 to-white py-20 lg:py-28">
       <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-16 lg:grid-cols-[4fr_2fr]">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -30,7 +30,7 @@ function HeroSection() {
           </motion.div>
 
           {/* Right */}
-          <motion.div
+          {/* <motion.div
             className="flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -41,7 +41,7 @@ function HeroSection() {
               alt="About MetCare"
               className="w-full rounded-3xl shadow-xl"
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </Container>
     </section>

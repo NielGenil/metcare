@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import services from "../../data/services";
+import otherServices from "../../data/otherServices";
 
-function ServicesSection() {
+function OtherServicesSection() {
   return (
     <section className="py-20 bg-slate-50/50">
       <Container>
@@ -14,13 +14,13 @@ function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <SectionHeader
-            badge="Our Services"
-            title="Biomedical Services"
-            description="We provide preventive maintenance, calibration, repair, installation, and training to help healthcare facilities keep their medical equipment operating safely and efficiently."
+            badge="Other Services"
+            title="Specialized & Facility Services"
+            description="We support your hospital in managing equipment use and maintenance every day with our on-site services."
           />
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
-            {services.map((service) => {
+            {otherServices.map((service) => {
               return (
                 <motion.div
                   key={service.title}
@@ -51,4 +51,4 @@ function ServicesSection() {
   );
 }
 
-export default ServicesSection;
+export default OtherServicesSection;

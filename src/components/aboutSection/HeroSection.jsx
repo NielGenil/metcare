@@ -39,7 +39,7 @@ function HeroSection() {
             <img
               src={aboutImage}
               alt="About MetCare"
-              className="w-auto h-120"
+              className="w-auto sm:h-120"
             />
           </motion.div>
         </div>

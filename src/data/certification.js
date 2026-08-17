@@ -1,6 +1,6 @@
 const certificate = [
   {
-    name: "ISO 9001 Certificate of Registration",
+    name: "ISO 9001:2015 Certificate of Registration",
     image: "/images/certification/certificate-of-registration.jpg",
   },
   {
