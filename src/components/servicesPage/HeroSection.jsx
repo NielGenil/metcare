@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import aboutImage from "../../assets/images/about.jpg";
 
 function HeroSection() {
   return (
-    <section className="bg-gradient-to-b from-green-50 to-white py-20 lg:py-28">
+    <section className="w-full h-full bg-[url('/images/services/bg.jpg')] bg-no-repeat bg-cover bg-center py-20 lg:py-28">
       <Container>
         <div className="grid items-center gap-16 lg:grid-cols-[4fr_2fr]">
           {/* Left */}

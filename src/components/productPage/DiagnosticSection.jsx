@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import services from "../../data/services";
+import { diagnosticImaging } from "../../data/products";
 
-function BiomedicalSection() {
+function DiagnosticSection() {
   return (
     <section className="py-20">
       <Container>
@@ -13,17 +13,13 @@ function BiomedicalSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <SectionHeader
-            badge="Our Services"
-            title="Biomedical Services"
-            description="We provide preventive maintenance, calibration, repair, installation, and training to help healthcare facilities keep their medical equipment operating safely and efficiently."
-          />
+          <SectionHeader title="Diagnostic Imaging Systems" />
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
-            {services.map((service) => {
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2 mb-10">
+            {diagnosticImaging.map((product) => {
               return (
                 <motion.div
-                  key={service.title}
+                  key={product.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -31,15 +27,15 @@ function BiomedicalSection() {
                   className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
-                    src={service.image}
-                    alt={service.name}
+                    src={product.image}
+                    alt={product.name}
                     className="h-64 w-full object-cover"
                   />
 
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
+                    <h3 className="text-xl font-semibold">{product.title}</h3>
 
-                    <p className="mt-3 text-slate-600">{service.description}</p>
+                    <p className="mt-3 text-slate-600">{product.description}</p>
                   </div>
                 </motion.div>
               );
@@ -51,4 +47,4 @@ function BiomedicalSection() {
   );
 }
 
-export default BiomedicalSection;
+export default DiagnosticSection;

@@ -3,9 +3,9 @@ import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import services from "../../data/services";
 
-function ServicesSection() {
+function BiomedicalSection() {
   return (
-    <section className="py-20 bg-slate-50/50">
+    <section className="py-20">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,7 +14,7 @@ function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <SectionHeader
-            badge="Our Services"
+            badge="Services"
             title="Biomedical Services"
             description="We provide preventive maintenance, calibration, repair, installation, and training to help healthcare facilities keep their medical equipment operating safely and efficiently."
           />
@@ -51,4 +51,4 @@ function ServicesSection() {
   );
 }
 
-export default ServicesSection;
+export default BiomedicalSection;

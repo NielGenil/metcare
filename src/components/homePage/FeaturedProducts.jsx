@@ -1,6 +1,6 @@
 import Button from "../ui/Button";
 import Container from "../ui/Container";
-import products from "../../data/products";
+import { products } from "../../data/products";
 import SectionHeader from "../ui/SectionHeader";
 import { motion } from "framer-motion";
 
@@ -43,10 +43,10 @@ function FeaturedProducts() {
 
                   <div className="p-6">
                     <div className="flex items-center gap-2">
-                    <div className="inline-flex rounded-xl bg-teal-100 p-2 text-2xl text-teal-600">
-                      <Icon />
-                    </div>
-                    <h3 className="text-xl font-semibold">{product.name}</h3>
+                      <div className="inline-flex rounded-xl bg-teal-100 p-2 text-2xl text-teal-600">
+                        <Icon />
+                      </div>
+                      <h3 className="text-xl font-semibold">{product.name}</h3>
                     </div>
 
                     <Button to="/products" className="mt-6 w-full">

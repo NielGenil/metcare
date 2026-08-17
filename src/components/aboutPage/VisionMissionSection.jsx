@@ -5,7 +5,7 @@ import aboutImage from "/images/about/core-value.jpg";
 
 function VisionMissionSection() {
   return (
-    <section className="pb-10">
+    <section className="py-10">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
