@@ -6,7 +6,14 @@ import aboutImage from "/images/about/building.jpg";
 function HeroSection() {
   return (
     <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-15">
-      <div className="absolute inset-0 bg-[url('/images/about/bg.jpg')] bg-cover bg-center bg-no-repeat opacity-80" />
+      <div
+        className="absolute inset-0
+      bg-[url('/images/about/bg.jpg')]
+      bg-cover bg-center bg-no-repeat
+      opacity-80
+      [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]
+      [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
+      />
       <div className="relative z-10">
         <Container>
           <div className="grid items-center gap-16 lg:grid-cols-2">

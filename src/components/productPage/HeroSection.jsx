@@ -4,7 +4,16 @@ import SectionHeader from "../ui/SectionHeader";
 
 function HeroSection() {
   return (
-    <section className="w-full h-full bg-[url('/images/services/bg.jpg')] bg-no-repeat bg-cover bg-center py-20 lg:py-28">
+    <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-15">
+      <div
+        className="absolute inset-0
+      bg-[url('/images/services/bg.jpg')]
+      bg-cover bg-center bg-no-repeat
+      opacity-80
+      [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]
+      [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_95%,transparent_100%)]"
+      />
+      <div className="relative z-10">
       <Container>
         <div className="grid items-center gap-16 lg:grid-cols-[4fr_2fr]">
           {/* Left */}
@@ -43,6 +52,7 @@ function HeroSection() {
           </motion.div> */}
         </div>
       </Container>
+      </div>
     </section>
   );
 }

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import { diagnosticImaging } from "../../data/products";
+import { surgicalOperating } from "../../data/products";
 
-function DiagnosticSection() {
+function SurgicalOperatingSection() {
   return (
     <section className="py-10">
       <Container>
@@ -13,10 +13,10 @@ function DiagnosticSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <SectionHeader title="Diagnostic Imaging Systems" />
+          <SectionHeader title="Surgical & Operating Room Solutions" />
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            {diagnosticImaging.map((product) => {
+            {surgicalOperating.map((product) => {
               return (
                 <motion.div
                   key={product.title}
@@ -47,4 +47,4 @@ function DiagnosticSection() {
   );
 }
 
-export default DiagnosticSection;
+export default SurgicalOperatingSection;
