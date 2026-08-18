@@ -22,7 +22,6 @@ function WhyChooseUs() {
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2 mb-10">
             {whyChooseUs.map((service) => {
-          
               return (
                 <motion.div
                   key={service.title}
@@ -37,11 +36,12 @@ function WhyChooseUs() {
                       src={service.image}
                       alt={service.name}
                       className="h-full w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    
                     <h3 className="text-lg font-semibold text-slate-900">
                       {service.title}
                     </h3>

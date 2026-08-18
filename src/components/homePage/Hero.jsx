@@ -4,7 +4,7 @@ import Container from "../ui/Container";
 
 function Hero() {
   return (
-    <section className="relative bg-[url('/images/hero-bg.jpg')] bg-cover bg-center py-20 lg:py-28">
+    <section className="relative bg-[url('/images/hero-bg.webp')] bg-cover bg-center py-20 lg:py-28">
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-black/40"></div>
       <div className="relative z-10">
       <Container>

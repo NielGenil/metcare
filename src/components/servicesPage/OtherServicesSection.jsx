@@ -34,6 +34,8 @@ function OtherServicesSection() {
                     src={service.image}
                     alt={service.name}
                     className="h-64 w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="p-6">

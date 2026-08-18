@@ -31,6 +31,8 @@ function MaternalCalibrationSection() {
                     src={product.image}
                     alt={product.name}
                     className="h-64 w-full shrink-0 object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="flex flex-1 flex-col p-6">
@@ -66,6 +68,8 @@ function MaternalCalibrationSection() {
                     src={product.image}
                     alt={product.name}
                     className="h-64 w-full shrink-0 object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="flex flex-1 flex-col p-6">

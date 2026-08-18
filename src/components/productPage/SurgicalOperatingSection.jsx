@@ -30,6 +30,8 @@ function SurgicalOperatingSection() {
                     src={product.image}
                     alt={product.name}
                     className="h-64 w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="p-6">

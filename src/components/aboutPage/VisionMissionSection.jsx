@@ -1,7 +1,7 @@
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import { motion } from "framer-motion";
-import aboutImage from "/images/about/core-value.jpg";
+import aboutImage from "/images/about/core-value.webp";
 
 function VisionMissionSection() {
   return (

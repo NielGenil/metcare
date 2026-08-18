@@ -1,7 +1,7 @@
 import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
-import aboutImage from "../../assets/images/about-us.jpg";
+import aboutImage from "../../assets/images/about-us.webp";
 
 function CompanyIntroduction() {
   return (
@@ -14,7 +14,6 @@ function CompanyIntroduction() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            
           >
             <SectionHeader
               badge="About Us"
@@ -23,7 +22,6 @@ function CompanyIntroduction() {
               center={false}
             />
           </motion.div>
-          
 
           {/* Right */}
           <motion.div
@@ -32,15 +30,15 @@ function CompanyIntroduction() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            
           >
             <img
               src={aboutImage}
               alt="About MetCare"
               className="w-full"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
-          
         </div>
       </Container>
     </section>

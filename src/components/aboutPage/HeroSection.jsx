@@ -1,14 +1,14 @@
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import { motion } from "framer-motion";
-import aboutImage from "/images/about/building.jpg";
+import aboutImage from "/images/about/building.webp";
 
 function HeroSection() {
   return (
     <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-15">
       <div
         className="absolute inset-0
-      bg-[url('/images/about/bg.jpg')]
+      bg-[url('/images/about/bg.webp')]
       bg-cover bg-center bg-no-repeat
       opacity-80
       [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]
