@@ -22,17 +22,19 @@ function BiomedicalSection() {
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
             {services.map((service) => {
               return (
-                <motion.div
+                <div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  // initial={{ opacity: 0, y: 30 }}
+                  // whileInView={{ opacity: 1, y: 0 }}
+                  // viewport={{ once: true }}
+                  // transition={{ duration: 0.6 }}
+                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
                 >
                   <img
                     src={service.image}
                     alt={service.name}
+                    width={640}
+                    height={256}
                     className="h-64 w-full object-cover"
                     loading="lazy"
                     decoding="async"
@@ -43,7 +45,7 @@ function BiomedicalSection() {
 
                     <p className="mt-3 text-slate-600">{service.description}</p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

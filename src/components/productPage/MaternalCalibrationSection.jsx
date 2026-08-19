@@ -19,17 +19,15 @@ function MaternalCalibrationSection() {
 
             <div className="mt-14 flex w-full flex-1">
               {maternal.map((product) => (
-                <motion.div
+                <div
                   key={product.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
                   className="flex h-[520px] sm:h-[450px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
+                    width={640}
+                    height={256}
                     className="h-64 w-full shrink-0 object-cover"
                     loading="lazy"
                     decoding="async"
@@ -40,7 +38,7 @@ function MaternalCalibrationSection() {
 
                     <p className="mt-3 text-slate-600">{product.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
@@ -56,17 +54,15 @@ function MaternalCalibrationSection() {
 
             <div className="mt-14 flex w-full flex-1">
               {calibration.map((product) => (
-                <motion.div
+                <div
                   key={product.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
                   className="flex h-[520px] sm:h-[450px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
+                    width={640}
+                    height={256}
                     className="h-64 w-full shrink-0 object-cover"
                     loading="lazy"
                     decoding="async"
@@ -77,7 +73,7 @@ function MaternalCalibrationSection() {
 
                     <p className="mt-3 text-slate-600">{product.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>

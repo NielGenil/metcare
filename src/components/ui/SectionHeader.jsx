@@ -19,7 +19,7 @@ function SectionHeader({
       {description && (
         <p
           className={`mt-4 sm:text-lg leading-8 text-slate-600 ${
-            center ? "mx-auto max-w-5xl" : "max-w-2xl"
+            center ? "mx-auto max-w-5xl" : "max-w-4xl"
           }`}
         >
           {description}

@@ -18,17 +18,15 @@ function DigitalHealthSection() {
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
             {digitalHealth.map((product) => {
               return (
-                <motion.div
+                <div
                   key={product.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
                   className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
+                    width={640}
+                    height={256}
                     className="h-64 w-full object-cover"
                     loading="lazy"
                     decoding="async"
@@ -39,7 +37,7 @@ function DigitalHealthSection() {
 
                     <p className="mt-3 text-slate-600">{product.description}</p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

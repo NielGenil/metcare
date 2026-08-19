@@ -3,6 +3,7 @@ import Hero from "../components/homePage/Hero";
 import Services from "../components/homePage/Services";
 import WhyChooseUs from "../components/homePage/WhyChooseUs";
 import CompanyIntroduction from "../components/homePage/CompanyIntroduction";
+import LatestUpdatesSection from "../components/homePage/LatestUpdatesSection";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Services />
       <FeaturedProducts />
       <WhyChooseUs />
+      <LatestUpdatesSection />
       {/* <Process /> */}
     </>
   );

@@ -40,7 +40,7 @@ function FeaturedProducts() {
                     alt={product.name}
                     className="h-64 w-full object-cover"
                     loading="lazy"
-                    decoding="async"
+                    // decoding="async"
                   />
 
                   <div className="p-6">

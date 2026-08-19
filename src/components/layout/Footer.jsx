@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 import logo from "../../assets/images/logo.jpg";
 import Container from "../ui/Container";
+import { MdOutlinePhoneIphone } from "react-icons/md";
 
 function Footer() {
   return (
@@ -81,10 +82,14 @@ function Footer() {
               </span>
             </div>
 
-            {/* <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
+              <MdOutlinePhoneIphone className="text-teal-400" />
+              <span>(0915) 289-5621</span>
+            </div>
+            <div className="flex items-center gap-3">
               <FaPhone className="text-teal-400" />
-              <span>+63 000 000 0000</span>
-            </div> */}
+              <span>(049) 502-6984</span>
+            </div>
 
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-teal-400" />
