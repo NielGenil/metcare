@@ -1,4 +1,4 @@
-import { FaArrowRight, FaFacebook, FaFacebookF } from "react-icons/fa";
+import { FaArrowRight, FaFacebook } from "react-icons/fa";
 import SectionHeader from "../ui/SectionHeader";
 
 const FACEBOOK_PAGE_URL = import.meta.env.VITE_FACEBOOK_URL;
@@ -58,55 +58,55 @@ export default function LatestUpdatesSection() {
           </div>
 
           {/* CTA */}
-<div className="group relative flex min-h-[500px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-700 via-emerald-700 to-emerald-900 p-8 text-white shadow-lg">
-  {/* Decorative background */}
-  <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/5" />
-  <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-emerald-400/10" />
+          <div className="group relative flex min-h-[500px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-700 via-emerald-700 to-emerald-900 p-8 text-white shadow-lg">
+            {/* Decorative background */}
+            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/5" />
+            <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-emerald-400/10" />
 
-  {/* Content */}
-  <div className="relative z-10">
-    {/* <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/10 backdrop-blur-sm transition duration-300 group-hover:bg-white/15">
+            {/* Content */}
+            <div className="relative z-10">
+              {/* <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/10 backdrop-blur-sm transition duration-300 group-hover:bg-white/15">
       <FaFacebookF size={24} />
     </div> */}
 
-    <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-emerald-200">
-      Stay Connected
-    </p>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-emerald-200">
+                Stay Connected
+              </p>
 
-    <h3 className="text-3xl font-bold tracking-tight">
-      Follow Us on Facebook
-    </h3>
+              <h3 className="text-3xl font-bold tracking-tight">
+                Follow us on Facebook
+              </h3>
 
-    <p className="mt-5 max-w-md text-base leading-7 text-emerald-50/90">
-      Stay updated with our latest medical equipment, product launches,
-      installations, deliveries, and company news.
-    </p>
-  </div>
+              <p className="mt-5 max-w-md text-base leading-7 text-emerald-50/90">
+                Stay updated with our latest medical equipment, product
+                launches, installations, deliveries, and company news.
+              </p>
+            </div>
 
-  {/* Bottom CTA */}
-  <div className="relative z-10 mt-12">
-    <div className="mb-6 h-px w-full bg-white/10" />
+            {/* Bottom CTA */}
+            <div className="relative z-10 mt-12">
+              <div className="mb-6 h-px w-full bg-white/10" />
 
-    <div className="flex items-center justify-between gap-4">
-      <span className="text-sm text-emerald-100">
-        Visit our official page
-      </span>
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-sm text-emerald-100">
+                  Visit our official page
+                </span>
 
-      <a
-        href={FACEBOOK_PAGE_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group/btn inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-emerald-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-50 hover:shadow-md"
-      >
-        Visit Page
-        <FaArrowRight
-          size={14}
-          className="transition-transform duration-300 group-hover/btn:translate-x-1"
-        />
-      </a>
-    </div>
-  </div>
-</div>
+                <a
+                  href={FACEBOOK_PAGE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/btn inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-emerald-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-50 hover:shadow-md"
+                >
+                  Visit Page
+                  <FaArrowRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover/btn:translate-x-1"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

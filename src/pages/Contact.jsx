@@ -10,6 +10,7 @@ import { FaEnvelope } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 function Contact() {
   const turnstileRef = useRef();
@@ -97,12 +98,19 @@ function Contact() {
       [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_100%,transparent_100%)]"
         />
+        <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
         <div className="relative z-10">
           <SectionHeader
             title="Let's Discuss Your Healthcare Equipment Needs"
             description="Have questions or need a quotation? Send us a message and our team will get back to you as soon as possible."
           />
         </div>
+        </motion.div>
       </section>
 
       <div className="overflow-hidden shadow-sm">

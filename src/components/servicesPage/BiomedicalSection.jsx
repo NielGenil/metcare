@@ -18,6 +18,7 @@ function BiomedicalSection() {
             title="Biomedical Services"
             description="We provide preventive maintenance, calibration, repair, installation, and training to help healthcare facilities keep their medical equipment operating safely and efficiently."
           />
+          </motion.div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
             {services.map((service) => {
@@ -38,6 +39,7 @@ function BiomedicalSection() {
                     className="h-64 w-full object-cover"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
                   />
 
                   <div className="p-6">
@@ -49,7 +51,7 @@ function BiomedicalSection() {
               );
             })}
           </div>
-        </motion.div>
+        
       </Container>
     </section>
   );

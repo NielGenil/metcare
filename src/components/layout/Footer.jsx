@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
+
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 import logo from "../../assets/images/logo.jpg";
-import Container from "../ui/Container";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 
 function Footer() {
   return (
     <footer className="bg-gradient-to-b from-emerald-800 to-teal-950 text-white border-t border-emerald-700">
-      <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5 sm:px-40 p-10">
+      <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4 sm:px-40 p-10">
         {/* Company */}
         <div>
           <img src={logo} alt="MetCare" className="sm:h-10  h-9" />
@@ -35,7 +34,7 @@ function Footer() {
           </div> */}
 
         {/* Equipment Rental */}
-        <div>
+        {/* <div>
           <h3 className="text-lg font-semibold text-white">Equipment Rental</h3>
 
           <ul className="mt-6 space-y-3">
@@ -44,7 +43,7 @@ function Footer() {
             <li>Respiratory Therapy Equipment</li>
             <li>Patient Monitoring Equipment</li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Services */}
         <div>
@@ -91,8 +90,9 @@ function Footer() {
               <span>(049) 502-6984</span>
             </div>
 
+      
             <div className="flex items-center gap-3">
-              <FaEnvelope className="text-teal-400" />
+              <FaEnvelope  className="text-teal-400" />
               <span>metcare.biomedical@gmail.com</span>
             </div>
           </div>
