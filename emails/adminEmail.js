@@ -2,6 +2,7 @@ export function adminEmail({ name, email, subject, message }) {
   const date = new Date().toLocaleString("en-PH", {
     dateStyle: "full",
     timeStyle: "short",
+    timeZone: "Asia/Manila",
   });
 
   return `
