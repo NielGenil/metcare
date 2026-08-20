@@ -145,9 +145,7 @@ function Contact() {
                       <FaEnvelope className="text-emerald-600 text-xl" />
                       <h2 className="text-lg font-semibold">Email</h2>
                     </div>
-                    <p className="">
-                      metcare.biomedical@gmail.com
-                    </p>
+                    <p className="">metcare.biomedical@gmail.com</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
@@ -161,18 +159,14 @@ function Contact() {
                       <MdOutlinePhoneIphone className="text-emerald-600 text-2xl" />
                       <h2 className="text-lg font-semibold">Mobile Number</h2>
                     </div>
-                    <p className="">
-                      (0915) 289-5621
-                    </p>
+                    <p className="">(0915) 289-5621</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
                       <FaPhone className="text-emerald-600 text-xl" />
                       <h2 className="text-lg font-semibold">Landline Number</h2>
                     </div>
-                    <p className="">
-                      (049) 502-6984
-                    </p>
+                    <p className="">(049) 502-6984</p>
                   </div>
                 </div>
               </div>
@@ -241,29 +235,14 @@ function Contact() {
 
                 <Button
                   type="submit"
-                  disabled={!turnstileToken || isSubmitting}
+                  disabled={isSubmitting}
                   className="w-full flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
-                      <svg
-                        className="h-5 w-5 animate-spin"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <circle
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                          className="opacity-20"
-                        />
-                        <path
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                        />
-                      </svg>
+                      {isSubmitting && (
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      )}
                       Sending...
                     </>
                   ) : (
