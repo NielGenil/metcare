@@ -1,4 +1,4 @@
-import DiagnosticSection from "../components/productPage/diagnosticSection";
+import DiagnosticSection from "../components/productPage/DiagnosticSection";
 import DigitalHealthSection from "../components/productPage/DigitalHealthSection";
 import HeroSection from "../components/productPage/HeroSection";
 import IcuCriticalSection from "../components/productPage/IcuCriticalSection";
