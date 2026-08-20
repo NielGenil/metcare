@@ -22,13 +22,13 @@ export function adminEmail({ name, email, subject, message }) {
 
 <!-- Header -->
 <tr>
-<td style="padding:10px 48px 10px;">
+<td style="padding:44px 48px 28px;">
 <table width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td>
 <img
 src="https://metcare-nine.vercel.app/logo.jpg"
-width="120"
+width="150"
 alt="MetCare"
 />
 </td>
