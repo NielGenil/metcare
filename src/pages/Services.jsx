@@ -1,13 +1,13 @@
-import BiomedicalSection from "../components/servicesSection/BiomedicalSection";
-import HeroSection from "../components/servicesSection/HeroSection";
-import ServicesSection from "../components/servicesSection/ServicesSection";
+import BiomedicalSection from "../components/servicesPage/BiomedicalSection";
+import HeroSection from "../components/servicesPage/HeroSection";
+import OtherServicesSection from "../components/servicesPage/OtherServicesSection";
 
 function Services() {
   return (
     <>
     <HeroSection/>
-    <ServicesSection/>
     <BiomedicalSection/>
+    <OtherServicesSection/>
     </>
   );
 }

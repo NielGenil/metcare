@@ -1,17 +1,20 @@
-import FeaturedProducts from "../components/homeSections/FeaturedProducts";
-import Hero from "../components/homeSections/Hero";
-import Process from "../components/homeSections/Process";
-import Services from "../components/homeSections/Services";
-import WhyChooseUs from "../components/homeSections/WhyChooseUs";
+import FeaturedProducts from "../components/homePage/FeaturedProducts";
+import Hero from "../components/homePage/Hero";
+import Services from "../components/homePage/Services";
+import WhyChooseUs from "../components/homePage/WhyChooseUs";
+import CompanyIntroduction from "../components/homePage/CompanyIntroduction";
+import LatestUpdatesSection from "../components/homePage/LatestUpdatesSection";
 
 function Home() {
   return (
     <>
       <Hero />
+      <CompanyIntroduction />
       <Services />
-      <WhyChooseUs />
       <FeaturedProducts />
-      <Process />
+      <WhyChooseUs />
+      <LatestUpdatesSection />
+      {/* <Process /> */}
     </>
   );
 }

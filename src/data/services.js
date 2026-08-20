@@ -1,53 +1,46 @@
-import {
-  FaScrewdriverWrench,
-  // FaStethoscope,
-  FaHeartPulse,
-  FaHospital,
-  FaTruckMedical,
-  FaUserDoctor,
-} from "react-icons/fa6";
-import { IoMdSettings } from "react-icons/io";
-import { FaDraftingCompass } from "react-icons/fa";
-import { MdManageAccounts } from "react-icons/md";
-
-
 const services = [
   {
-    title: "Biomedical Engineering",
+    title: "Inspection & Preventive Maintenance",
     description:
-      "Our engineers use calibrated tools and expert training to deliver reliable, high-quality service.",
-    icon: IoMdSettings,
+      "Comprehensive maintenance routines for clinical and lab equipment to protect performance, maintain safety standards, and extend machine lifespans.",
+    name: "Inspection & Preventive Maintenance",
+    image: "/images/services/inspection.webp",
   },
   {
-    title: "Calibration Services",
+    title: "Equipment Calibration",
     description:
-      "We provide accurate, expert-driven calibration to keep your equipment performing at its best.",
-    icon: FaDraftingCompass,
+      "Precision calibration services to keep diagnostic devices compliant with strict manufacturer and industry regulatory standards.",
+    name: "Equipment Calibration",
+    image: "/images/services/calibration.webp",
   },
   {
-    title: "Asset Management",
+    title: "Repair & Corrective Maintenance",
     description:
-      "We support your hospital in managing equipment use and maintenance every day with our on-site services.",
-    icon: MdManageAccounts,
+      "Expert diagnostic and restoration services for failing clinical equipment, using high-quality parts to restore your devices to factory specifications.",
+    name: "Repair & Corrective Maintenance",
+    image: "/images/services/repair.webp",
   },
-  // {
-  //   title: "Installation & Commissioning",
-  //   description:
-  //     "Professional installation and testing of medical equipment before operation.",
-  //   icon: FaHospital,
-  // },
-  // {
-  //   title: "Medical Equipment Supply",
-  //   description:
-  //     "Supply of quality medical devices and healthcare equipment for hospitals and clinics.",
-  //   icon: FaTruckMedical,
-  // },
-  // {
-  //   title: "Technical Support",
-  //   description:
-  //     "Responsive technical assistance and consultation for healthcare facilities.",
-  //   icon: FaUserDoctor,
-  // },
+  {
+    title: "Equipment Supply & Installation",
+    description:
+      "Complete supply and professional installation of advanced diagnostic imaging systems, including MRI, CT scans, and Ultrasound machines, tailored to facility specifications.",
+    name: "Equipment Supply & Installation",
+    image: "/images/services/training.webp",
+  },
+  {
+    title: "Radiological Performance Testing",
+    description:
+      "Rigorous performance testing for radiological equipment and accessories. Verifies image quality, output accuracy, and operational safety to meet healthcare quality standards.",
+    name: "Radiological Performance Testing",
+    image: "/images/place-holder.webp",
+  },
+  {
+    title: "Biomedical Training & Consultancy",
+    description:
+      "Specialized technical training and advisory services for healthcare personnel  to optimize equipment operation, care, and safety protocols.",
+    name: "Biomedical Training & Consultancy",
+    image: "/images/place-holder.webp",
+  },
 ];
 
 export default services;
