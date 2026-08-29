@@ -5,10 +5,10 @@ import Container from "../ui/Container";
 function Hero() {
   return (
     <section className="relative bg-[url('/images/hero-bg.webp')] bg-cover bg-center py-20 lg:py-28">
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-green-950/70 to-black/40"></div>
       <div className="relative z-10">
       <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -20,10 +20,13 @@ function Hero() {
             </span> */}
 
             <h1 className="mt-6 text-3xl font-bold leading-tight text-white lg:text-6xl">
-              Your Partner in Quality Health Care Delivery
+              Precision in every measure
+            </h1>
+            <h1 className="text-3xl font-bold leading-tight text-white lg:text-6xl">
+              Trust in every result
             </h1>
 
-            <p className="mt-6 sm:text-lg leading-8 text-gray-300">
+            <p className="mt-6 sm:text-lg leading-8 text-gray-300 max-w-160">
               Trusted biomedical service provider since 2015 - ISO-certified and specialized in calibration and repair
             </p>
 

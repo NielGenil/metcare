@@ -2,11 +2,11 @@ const theme = {
   colors: {
     primary: "green",
     secondary: "slate",
-    accent: "emerald",
+    accent: "green",
   },
 
   company: {
-    name: "MetCare",
+    name: "Metcare",
     slogan: "Healthcare Solutions",
   },
 };

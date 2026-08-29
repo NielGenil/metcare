@@ -117,13 +117,13 @@ export const sterilizationWaste = [
 ];
 
 export const digitalHealth = [
-  {
-    title: "GemConnect+ Systems",
-    description: "Integrated digital healthcare tools featuring an intelligent medical record system and telemedicine health monitoring platforms.",
-    name: "GemConnect+ Systems",
-    image: "/images/products/gemconnect.webp",
+  // {
+  //   title: "GemConnect+ Systems",
+  //   description: "Integrated digital healthcare tools featuring an intelligent medical record system and telemedicine health monitoring platforms.",
+  //   name: "GemConnect+ Systems",
+  //   image: "/images/products/gemconnect.webp",
   
-  },
+  // },
   {
     title: "Nipro Medical Dialysis Solutions",
     description: "High-performance hemodialysis machines and medical consumables for comprehensive renal care.",

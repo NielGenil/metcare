@@ -8,7 +8,7 @@ function WhyChooseUs() {
     <section className="bg-slate-50/50 py-24">
       <Container>
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -25,8 +25,8 @@ function WhyChooseUs() {
               return (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                   className="grid grid-cols-1 sm:grid-cols-[2fr_4fr] items-center gap-5 border rounded-md p-5 border-slate-300 bg-white"

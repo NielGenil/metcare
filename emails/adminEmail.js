@@ -30,7 +30,7 @@ export function adminEmail({ name, email, subject, message }) {
 <img
 src="https://metcare-nine.vercel.app/logo.jpg"
 width="150"
-alt="MetCare"
+alt="Metcare"
 />
 </td>
 <td align="right" style="font-size:12px;color:#a3a3a3;">

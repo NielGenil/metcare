@@ -39,13 +39,13 @@ function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div>
-            <h1 className="text-2xl font-bold text-slate-900 sm:hidden">
-              MetCare
-            </h1>
+            {/* <h1 className="text-2xl font-bold text-slate-900 sm:hidden">
+              Metcare
+            </h1> */}
 
-            <img src={logo} alt="MetCare" className="sm:h-16 sm:block hidden" />
+            <img src={logo} alt="Metcare" className="sm:h-16 h-11" />
 
-            {/* <p className="text-sm text-teal-600">Healthcare Solutions</p> */}
+            {/* <p className="text-sm text-green-600">Healthcare Solutions</p> */}
           </div>
 
           {/* Desktop Menu */}
@@ -56,8 +56,8 @@ function Navbar() {
                 to={link.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "font-semibold text-teal-600"
-                    : "text-slate-700 transition hover:text-teal-600"
+                    ? "font-semibold text-green-600"
+                    : "text-slate-700 transition hover:text-green-600"
                 }
               >
                 {link.name}
@@ -84,7 +84,7 @@ function Navbar() {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    isActive ? "font-semibold text-teal-600" : "text-slate-700"
+                    isActive ? "font-semibold text-green-600" : "text-slate-700"
                   }
                 >
                   {link.name}

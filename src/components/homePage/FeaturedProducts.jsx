@@ -45,7 +45,7 @@ function FeaturedProducts() {
 
                   <div className="p-6">
                     <div className="flex items-center gap-2">
-                      <div className="inline-flex rounded-xl bg-teal-100 p-2 text-2xl text-teal-600">
+                      <div className="inline-flex rounded-xl bg-green-100 p-2 text-2xl text-green-600">
                         <Icon />
                       </div>
                       <h3 className="text-xl font-semibold">{product.name}</h3>

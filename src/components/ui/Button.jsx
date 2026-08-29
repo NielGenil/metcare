@@ -10,7 +10,7 @@ function Button({
   disabled = false,
 }) {
   const variants = {
-    primary: "bg-emerald-600 text-white hover:bg-green-700",
+    primary: "bg-green-600 text-white hover:bg-green-700",
     secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",
     outline:
       "border border-green-600 text-green-600 hover:bg-green-600 hover:text-white",

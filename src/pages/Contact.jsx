@@ -107,14 +107,14 @@ function Contact() {
 
       <div className="overflow-hidden shadow-sm">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.0840866595327!2d121.07457169999999!3d14.306546899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d79898932e1f%3A0x1e0676f1660ced59!2sMETCARE%20Biomedical%20Corporation!5e0!3m2!1sen!2sph!4v1784788020003!5m2!1sen!2sph"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.0840866595327!2d121.07457169999999!3d14.306546899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d79898932e1f%3A0x1e0676f1660ced59!2sMetcare%20Biomedical%20Corporation!5e0!3m2!1sen!2sph!4v1784788020003!5m2!1sen!2sph"
           width="100%"
           height="450"
           style={{ border: 0 }}
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          title="MetCare Location"
+          title="Metcare Location"
         />
       </div>
 
@@ -142,28 +142,28 @@ function Contact() {
                 <div className="grid gap-12 lg:grid-cols-2">
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
-                      <FaEnvelope className="text-emerald-600 text-xl" />
+                      <FaEnvelope className="text-green-600 text-xl" />
                       <h2 className="text-lg font-semibold">Email</h2>
                     </div>
                     <p className="">metcare.biomedical@gmail.com</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
-                      <FaClock className="text-emerald-600 text-xl" />
+                      <FaClock className="text-green-600 text-xl" />
                       <h2 className="text-lg font-semibold">Open Hours</h2>
                     </div>
                     <p className="">Mon-Sat: 8am-5pm</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
-                      <MdOutlinePhoneIphone className="text-emerald-600 text-2xl" />
+                      <MdOutlinePhoneIphone className="text-green-600 text-2xl" />
                       <h2 className="text-lg font-semibold">Mobile Number</h2>
                     </div>
                     <p className="">(0915) 289-5621</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex gap-2 items-center">
-                      <FaPhone className="text-emerald-600 text-xl" />
+                      <FaPhone className="text-green-600 text-xl" />
                       <h2 className="text-lg font-semibold">Landline Number</h2>
                     </div>
                     <p className="">(049) 502-6984</p>

@@ -26,7 +26,7 @@ function HeroSection() {
               <SectionHeader
                 badge="About Us"
                 title="Your Trusted Biomedical Engineering Partner"
-                description="MetCare provides biomedical engineering solutions for hospitals, clinics, laboratories, and healthcare facilities. Our commitment is to ensure medical equipment remains safe, reliable, and compliant with industry standards."
+                description="Metcare provides biomedical engineering solutions for hospitals, clinics, laboratories, and healthcare facilities. Our commitment is to ensure medical equipment remains safe, reliable, and compliant with industry standards."
                 center={false}
               />
 
@@ -47,7 +47,7 @@ function HeroSection() {
             >
               <img
                 src={aboutImage}
-                alt="About MetCare"
+                alt="About Metcare"
                 className="w-auto sm:h-120"
               />
             </motion.div>
@@ -60,7 +60,7 @@ function HeroSection() {
               transition={{ duration: 0.8 }}
             >
               <p>
-                Since establishment in 2015, METCARE Biomedical Corporation has
+                Since establishment in 2015, Metcare Biomedical Corporation has
                 been providing biomedical services such as calibration,
                 preventive maintenance and repair of medical dental and
                 laboratory equipment.

@@ -24,7 +24,7 @@ style="background:#0F7B43;padding:40px;">
 <img
 src="https://metcare-alpha.vercel.app/logo.jpg"
 width="90"
-alt="MetCare"
+alt="Metcare"
 />
 
 <h1 style="color:white;margin-top:20px;">
@@ -42,7 +42,7 @@ Thank You!
 <p>Hello <strong>${name}</strong>,</p>
 
 <p>
-Thank you for contacting <strong>MetCare</strong>.
+Thank you for contacting <strong>Metcare</strong>.
 </p>
 
 <p>
@@ -77,7 +77,7 @@ This is an automated email. Please do not reply directly to this message.
 <td align="center"
 style="background:#f9fafb;padding:20px;font-size:13px;color:#9ca3af;">
 
-MetCare Biomedical Engineering Solutions
+Metcare Biomedical Engineering Solutions
 
 </td>
 

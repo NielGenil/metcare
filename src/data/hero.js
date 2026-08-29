@@ -4,7 +4,7 @@ const hero = {
   title: "Keeping Healthcare Equipment Reliable and Ready",
 
   description:
-    "MetCare provides preventive maintenance, calibration, repair, and medical equipment solutions to support hospitals, clinics, and healthcare providers.",
+    "Metcare provides preventive maintenance, calibration, repair, and medical equipment solutions to support hospitals, clinics, and healthcare providers.",
 
   buttons: [
     {
