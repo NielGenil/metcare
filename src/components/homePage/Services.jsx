@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 function Services() {
   return (
-    <section className="py-20 bg-slate-50/50">
+    <section className="py-20">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ function Services() {
                 transition={{ duration: 0.6 }}
                 className="rounded-2xl bg-white border border-gray-200 p-8 transition hover:-translate-y-2 hover:shadow-xl"
               >
-                <div className="inline-flex rounded-xl bg-teal-100 p-4 text-2xl text-teal-600">
+                <div className="inline-flex rounded-xl bg-green-100 p-4 text-2xl text-green-600">
                   <Icon />
                 </div>
 

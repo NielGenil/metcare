@@ -33,9 +33,9 @@ function SurgicalOperatingSection() {
                   />
 
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold">{product.title}</h3>
+                    {/* <h3 className="text-xl font-semibold">{product.title}</h3> */}
 
-                    <p className="mt-3 text-slate-600">{product.description}</p>
+                    <p className="text-slate-600">{product.description}</p>
                   </div>
                 </div>
               );

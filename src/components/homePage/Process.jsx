@@ -18,7 +18,7 @@ function Process() {
               key={item.step}
               className="rounded-2xl bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
             >
-              <div className="text-5xl font-bold text-teal-600">
+              <div className="text-5xl font-bold text-green-600">
                 {item.step}
               </div>
 

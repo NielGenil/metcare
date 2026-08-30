@@ -132,7 +132,7 @@ export default async function handler(req, res) {
 
     // Send email
     const { error } = await resend.emails.send({
-      from: "MetCare <onboarding@resend.dev>",
+      from: "Metcare <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `New Inquiry: ${subject}`,
@@ -155,7 +155,7 @@ export default async function handler(req, res) {
 
     // Send confirmation email to the customer
     const { error: autoReplyError } = await resend.emails.send({
-      from: "MetCare <onboarding@resend.dev>",
+      from: "Metcare <onboarding@resend.dev>",
       to: email,
       subject: "We've received your inquiry",
       html: autoReplyEmail({

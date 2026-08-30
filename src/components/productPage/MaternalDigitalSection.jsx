@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import { maternal, calibration } from "../../data/products";
+import { maternal, digitalHealth } from "../../data/products";
 
-function MaternalCalibrationSection() {
+function MaternalDigitalSection() {
   return (
     <section className="py-10">
       <Container>
@@ -21,7 +21,7 @@ function MaternalCalibrationSection() {
               {maternal.map((product) => (
                 <div
                   key={product.title}
-                  className="flex h-[520px] sm:h-[450px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  className="flex h-[450px] sm:h-[400px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}
@@ -34,9 +34,9 @@ function MaternalCalibrationSection() {
                   />
 
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-xl font-semibold">{product.title}</h3>
+                    {/* <h3 className="text-xl font-semibold">{product.title}</h3> */}
 
-                    <p className="mt-3 text-slate-600">{product.description}</p>
+                    <p className="text-slate-600">{product.description}</p>
                   </div>
                 </div>
               ))}
@@ -50,13 +50,13 @@ function MaternalCalibrationSection() {
             transition={{ duration: 0.6 }}
             className="flex h-full flex-col items-center"
           >
-            <SectionHeader title="Calibration & Testing Equipment" />
+            <SectionHeader title="Digital Health & Dialysis" />
 
             <div className="mt-14 flex w-full flex-1">
-              {calibration.map((product) => (
+              {digitalHealth.map((product) => (
                 <div
                   key={product.title}
-                  className="flex h-[520px] sm:h-[450px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  className="flex h-[450px] sm:h-[400px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}
@@ -69,9 +69,9 @@ function MaternalCalibrationSection() {
                   />
 
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-xl font-semibold">{product.title}</h3>
+                    {/* <h3 className="text-xl font-semibold">{product.title}</h3> */}
 
-                    <p className="mt-3 text-slate-600">{product.description}</p>
+                    <p className="text-slate-600">{product.description}</p>
                   </div>
                 </div>
               ))}
@@ -83,4 +83,4 @@ function MaternalCalibrationSection() {
   );
 }
 
-export default MaternalCalibrationSection;
+export default MaternalDigitalSection;

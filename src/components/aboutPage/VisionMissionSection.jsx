@@ -46,7 +46,7 @@ function VisionMissionSection() {
           >
             <img
               src={aboutImage}
-              alt="About MetCare"
+              alt="About Metcare"
               className="w-full"
             />
           </motion.div>
@@ -74,7 +74,7 @@ function VisionMissionSection() {
                 ["E", "nthusiasm"],
               ].map(([letter, word]) => (
                 <div key={letter + word} className="flex items-center gap-3">
-                  <span className="w-8 h-8 flex items-center justify-center rounded-md bg-teal-100 text-teal-700 font-bold text-xl">
+                  <span className="w-8 h-8 flex items-center justify-center rounded-md bg-green-100 text-green-700 font-bold text-xl">
                     {letter}
                   </span>
                   <span className="font-medium text-gray-700">{word}</span>
