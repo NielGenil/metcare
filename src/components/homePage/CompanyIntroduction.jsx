@@ -5,7 +5,7 @@ import aboutImage from "../../assets/images/about-us.webp";
 
 function CompanyIntroduction() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <Container>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left */}

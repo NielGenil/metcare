@@ -122,7 +122,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-400 py-6 text-center text-white text-sm bg-green-800">
+      <div className="py-6 text-center text-white text-sm bg-[#005a2b] border-t border-green-900">
         © {new Date().getFullYear()} Metcare. All rights reserved.
       </div>
       {/* <div className="h-5 w-full bg-slate-100" /> */}

@@ -10,8 +10,8 @@ function HeroSection() {
         className="absolute inset-0
       bg-[url('/images/about/bg.webp')]
       bg-cover bg-center bg-no-repeat
-      opacity-80
-      [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]
+      opacity-100
+      [mask-image:linear-gradient(to_bottom,black_0%,black_100%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
       />
       <div className="relative z-10">

@@ -6,7 +6,16 @@ import { motion } from "framer-motion";
 
 function FeaturedProducts() {
   return (
-    <section className="py-24 bg-white">
+   <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-15">
+      <div
+        className="absolute inset-0
+      bg-[url('/images/b1.jpg')]
+      bg-cover bg-center bg-no-repeat
+      opacity-100
+      [mask-image:linear-gradient(to_bottom,black_0%,black_100%,transparent_100%)]
+      [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
+      />
+      <div className="relative z-10">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,6 +70,7 @@ function FeaturedProducts() {
           </div>
         </motion.div>
       </Container>
+      </div>
     </section>
   );
 }

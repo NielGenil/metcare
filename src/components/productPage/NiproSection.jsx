@@ -19,7 +19,7 @@ function NiproSection() {
             <SectionHeader
             badge="Nipro"
               title="Nipro Medical Equipment"
-              description="Metcare is an authorized distributor of Nipro Medical Europe, Download official brochures below or contact our sales team for direct product specifications and institutional quotes."
+              description="Metcare is an authorized distributor of Nipro Medical Europe, Download official brochures below or contact us for direct product specifications and institutional quotes."
               center={false}
             />
             <div className="mt-8 flex flex-wrap gap-4">
