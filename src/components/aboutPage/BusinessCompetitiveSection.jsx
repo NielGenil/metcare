@@ -6,14 +6,14 @@ import SectionHeader from "../ui/SectionHeader";
 function BusinessCompetitiveSection() {
   return (
     <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-15">
-      <div
+      {/* <div
         className="absolute inset-0
-      bg-[url('/images/b2.jpg')]
+      bg-[url('/images/b3.jpg')]
       bg-cover bg-center bg-no-repeat
       opacity-100
       [mask-image:linear-gradient(to_bottom,black_0%,black_100%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
-      />
+      /> */}
       <div className="relative z-10">
       <Container>
         <motion.div
