@@ -36,8 +36,8 @@ function FeaturedProducts() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((product) => {
+          <div className="mt-14 mb-10 flex flex-wrap justify-center gap-8">
+            {products.slice(0, 3).map((product) => {
               const Icon = product.icon;
               return (
                 <div
@@ -60,9 +60,9 @@ function FeaturedProducts() {
                       <h3 className="text-xl font-semibold">{product.name}</h3>
                     </div>
 
-                    <Button to="/products" className="mt-6 w-full">
+                    {/* <Button to="/products" className="mt-6 w-full">
                       Learn More
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               );
@@ -70,6 +70,18 @@ function FeaturedProducts() {
           </div>
         </motion.div>
       </Container>
+
+      <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10"
+        >
+          <div className="w-full flex justify-center">
+            <Button to="/products">Learn more</Button>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

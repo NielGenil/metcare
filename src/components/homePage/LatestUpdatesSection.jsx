@@ -8,8 +8,8 @@ const FACEBOOK_EMBED_URL = `https://www.facebook.com/plugins/page.php?href=${enc
   FACEBOOK_PAGE_URL,
 )}&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`;
 
-console.log("Facebook URL:", FACEBOOK_PAGE_URL);
-console.log("Facebook embed:", FACEBOOK_EMBED_URL);
+// console.log("Facebook URL:", FACEBOOK_PAGE_URL);
+// console.log("Facebook embed:", FACEBOOK_EMBED_URL);
 
 export default function LatestUpdatesSection() {
   return (

@@ -5,9 +5,9 @@ import { maternal, digitalHealth } from "../../data/products";
 
 function MaternalDigitalSection() {
   return (
-    <section className="py-10">
+    <section>
       <Container>
-        <div className="grid items-stretch gap-8 md:grid-cols-2">
+        <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ function MaternalDigitalSection() {
               {maternal.map((product) => (
                 <div
                   key={product.title}
-                  className="flex h-[450px] sm:h-[400px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  className="flex h-[450px] sm:h-[400px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl w-[380px]"
                 >
                   <img
                     src={product.image}
@@ -56,7 +56,7 @@ function MaternalDigitalSection() {
               {digitalHealth.map((product) => (
                 <div
                   key={product.title}
-                  className="flex h-[450px] sm:h-[400px] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  className="flex h-[450px] sm:h-[400px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl w-[380px]"
                 >
                   <img
                     src={product.image}

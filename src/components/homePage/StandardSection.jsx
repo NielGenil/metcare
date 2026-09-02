@@ -42,14 +42,14 @@ function StandardSection() {
             />
           </motion.div>
 
-          <div className="mt-14 mb-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
             {visibleStandards.map((standard) => (
               <motion.div
                 key={`${standard.manufacturer}-${standard.model}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
               >
                 <img
                   src={standard.image}
@@ -67,17 +67,23 @@ function StandardSection() {
                     {standard.manufacturer}
                   </h3>
 
-                  <p className="mt-3 text-slate-600">
-                    <span className="font-semibold text-slate-700">
-                      Instrument:
-                    </span>{" "}
-                    {standard.name}
-                  </p>
+                  {standard.name && (
+                    <p className="mt-3 text-slate-600">
+                      <span className="font-semibold text-slate-700">
+                        Instrument:
+                      </span>{" "}
+                      {standard.name}
+                    </p>
+                  )}
 
-                  <p className="mt-3 text-slate-600">
-                    <span className="font-semibold text-slate-700">Model:</span>{" "}
-                    {standard.model}
-                  </p>
+                  {standard.model && (
+                    <p className="mt-3 text-slate-600">
+                      <span className="font-semibold text-slate-700">
+                        Model:
+                      </span>{" "}
+                      {standard.model}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}

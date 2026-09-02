@@ -5,7 +5,7 @@ import { sterilizationWaste } from "../../data/products";
 
 function SterilazationSection() {
   return (
-    <section className="py-10">
+    <section className="pb-10">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,12 +15,12 @@ function SterilazationSection() {
         >
           <SectionHeader title="Sterilization & Waste Management" />
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
             {sterilizationWaste.map((product) => {
               return (
                 <div
                   key={product.title}
-                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                   className="overflow-hidden rounded-2xl border border-gray-200 bg-white max-w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}

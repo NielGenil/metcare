@@ -79,7 +79,7 @@ export const maternal = [
     title: "Ro-Chain NICU Solutions",
     description: "Specialized neonatal equipment including infant incubators, radiant warmers, phototherapy units, and jaundice meters engineered for delicate newborn care.",
     name: "Ro-Chain NICU Solutions",
-    image: "/images/products/incubator.webp",
+    image: "/images/products/warmer.jpg",
   
   },
 ];
@@ -129,6 +129,24 @@ export const digitalHealth = [
     description: "High-performance hemodialysis machines and medical consumables for comprehensive renal care.",
     name: "Nipro Medical Dialysis Solutions",
     image: "/images/products/nipro.webp",
+  },
+];
+
+export const nipro = [
+  {
+    title: "AV Fistula Needle",
+    name: "AV Fistula Needle",
+    image: "/images/products/needles.jpg",
+  },
+  {
+    title: "Hemodialysis Bloodlines",
+    name: "Hemodialysis Bloodlines",
+    image: "/images/products/tubing.jpg",
+  },
+  {
+    title: "Consumables",
+    name: "Nipro Medical Dialysis Solutions",
+    image: "/images/products/consumables.jpg",
   },
 ];
 

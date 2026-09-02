@@ -31,10 +31,14 @@ function HeroSection() {
               />
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <a href="/broshures/Metcare Brochure 2026.pdf">
-              <Button>Download Our Brochure</Button>
-              </a>
-            </div>
+                <a
+                  href="/broshures/Metcare Brochure 2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button>Download Our Brochure</Button>
+                </a>
+              </div>
             </motion.div>
           </div>
         </Container>

@@ -26,15 +26,20 @@ function HeroSection() {
               <SectionHeader
                 badge="About Us"
                 title="Your Trusted Biomedical Engineering Partner"
-                description="Metcare provides biomedical engineering solutions for hospitals, clinics, laboratories, and healthcare facilities. Our commitment is to ensure medical equipment remains safe, reliable, and compliant with industry standards."
+                description="At Metcare Biomedical Corporation, we provide dependable biomedical engineering solutions that help healthcare facilities operate safely, efficiently, and confidently."
                 center={false}
               />
 
               <p className="mt-6 sm:text-lg leading-8 text-slate-600">
-                We specialize in preventive maintenance, calibration, repair,
-                installation, and technical support for a wide range of medical
-                devices. Our experienced team is dedicated to delivering quality
-                service that supports better patient care.
+                Established in 2015, Metcare specializes in the preventive
+                maintenance, calibration, repair, installation, and technical
+                support of medical, dental, and laboratory equipment. We work
+                with hospitals, clinics, laboratories, and other healthcare
+                facilities to ensure their equipment remains accurate, reliable,
+                and compliant with applicable standards. With a commitment to
+                quality and responsive service, our experienced team helps
+                healthcare providers maintain equipment performance, minimize
+                downtime, and support better patient care.
               </p>
             </motion.div>
 
@@ -54,16 +59,24 @@ function HeroSection() {
           </div>
           <div className="mt-6 sm:text-lg leading-8 text-slate-600">
             <motion.div
-              className="flex justify-center"
+              className="flex flex-col gap-5 justify-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <p>
-                Since establishment in 2015, Metcare Biomedical Corporation has
-                been providing biomedical services such as calibration,
-                preventive maintenance and repair of medical dental and
-                laboratory equipment.
+                Since 2015, Metcare Biomedical Corporation has been delivering
+                professional biomedical engineering services tailored to the
+                needs of healthcare facilities. Our expertise covers a wide
+                range of medical, dental, and laboratory equipment, providing
+                clients with reliable technical support throughout the equipment
+                lifecycle.
+              </p>
+
+              <p>
+                Our goal is simple: to keep healthcare equipment performing at
+                its best, so healthcare professionals can focus on what matters
+                most—patient care.
               </p>
             </motion.div>
           </div>

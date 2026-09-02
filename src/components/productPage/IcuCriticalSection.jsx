@@ -5,7 +5,7 @@ import { icuCritical } from "../../data/products";
 
 function IcuCriticalSection() {
   return (
-    <section className="py-10">
+    <section>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,12 +15,12 @@ function IcuCriticalSection() {
         >
           <SectionHeader title="ICU & Critical Care" />
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
             {icuCritical.map((product) => {
               return (
                 <div
                   key={product.title}
-                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white max-w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <img
                     src={product.image}

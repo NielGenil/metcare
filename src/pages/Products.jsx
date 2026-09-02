@@ -12,7 +12,7 @@ function Products() {
         <>
         <HeroSection />
         <NiproSection />
-        <DiagnosticSection/>
+        {/* <DiagnosticSection/> */}
         <SurgicalOperatingSection />
         <IcuCriticalSection />
         <MaternalDigitalSection />

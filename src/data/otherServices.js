@@ -13,13 +13,13 @@ const otherServices = [
     name: "X-Ray Room Design & Construction",
     image: "/images/services/x-ray.webp",
   },
-  {
-    title: "Ventilator Machine Rental",
-    description:
-      "Flexible, short- and long-term rental solutions for certified, critical-care ventilator systems ready for deployment.",
-    name: "Ventilator Machine Rental",
-    image: "/images/services/ventilator.webp",
-  },
+  // {
+  //   title: "Ventilator Machine Rental",
+  //   description:
+  //     "Flexible, short- and long-term rental solutions for certified, critical-care ventilator systems ready for deployment.",
+  //   name: "Ventilator Machine Rental",
+  //   image: "/images/services/ventilator.webp",
+  // },
   {
     title: "Medical Gases, Air & Vacuum Systems",
     description:
@@ -27,13 +27,13 @@ const otherServices = [
     name: "Medical Gases, Air & Vacuum Systems",
     image: "/images/services/oxygen.webp",
   },
-  {
-    title: "Hospital Pipeline Systems",
-    description:
-      "Design, installation, and compliance testing for centralized hospital pipeline networks distributing medical gases and vacuum supply.",
-    name: "Hospital Pipeline Systems",
-    image: "/images/services/pipelines.webp",
-  },
+  // {
+  //   title: "Hospital Pipeline Systems",
+  //   description:
+  //     "Design, installation, and compliance testing for centralized hospital pipeline networks distributing medical gases and vacuum supply.",
+  //   name: "Hospital Pipeline Systems",
+  //   image: "/images/services/pipelines.webp",
+  // },
 ];
 
 export default otherServices;

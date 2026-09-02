@@ -20,7 +20,7 @@ function OtherServicesSection() {
           />
         </motion.div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
+        <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
           {otherServices.map((service) => {
             return (
               <div
@@ -29,7 +29,7 @@ function OtherServicesSection() {
                 // whileInView={{ opacity: 1, y: 0 }}
                 // viewport={{ once: true }}
                 // transition={{ duration: 0.6 }}
-                className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
               >
                 <img
                   src={service.image}

@@ -20,16 +20,16 @@ function VisionMissionSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="border p-4 rounded-md border-slate-300 shadow-md">
                 <SectionHeader
-                  badge="Vision Statement"
+                  badge="Vision"
                   // title="To be a leader in the provision of quality biomedical services that exceeds the expectation of our esteemed customers."
                   description="To be a leader in the provision of quality biomedical services that exceeds the expectation of our esteemed customers."
                 />
               </div>
               <div className="border p-4 rounded-md border-slate-300 shadow-md">
                 <SectionHeader
-                  badge="Mission Statement"
+                  badge="Mission"
                   // title="To be a leader in the provision of quality biomedical services that exceeds the expectation of our esteemed customers."
-                  description="The company is committed to provide exceptional customer services by being responsive to their need. Proactive and enthusiastic about their requirements."
+                  description="The company is committed to provide exceptional customer services by being responsive to their needs, proactively and enthusiastic about their requirements."
                 />
               </div>
             </div>
@@ -44,11 +44,7 @@ function VisionMissionSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <img
-              src={aboutImage}
-              alt="About Metcare"
-              className="w-full"
-            />
+            <img src={aboutImage} alt="About Metcare" className="w-full" />
           </motion.div>
 
           {/* Right */}

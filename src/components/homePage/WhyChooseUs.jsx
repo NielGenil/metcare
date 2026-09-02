@@ -29,7 +29,7 @@ function WhyChooseUs() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="grid grid-cols-1 sm:grid-cols-[2fr_4fr] items-center gap-5 border rounded-md p-5 border-slate-300 bg-white"
+                  className="grid grid-cols-1 sm:grid-cols-[2fr_4fr] items-center gap-5 border rounded-md p-5 border-slate-300 bg-white transition hover:-translate-y-2 hover:shadow-xl"
                 >
                   <div className="flex items-center justify-center sm:h-30 h-25">
                     <img
