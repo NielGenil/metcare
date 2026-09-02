@@ -1,45 +1,38 @@
 const services = [
   {
-    title: "Inspection & Preventive Maintenance",
+    title: "Calibration Services",
     description:
-      "Comprehensive maintenance routines for clinical and lab equipment to protect performance, maintain safety standards, and extend machine lifespans.",
-    name: "Inspection & Preventive Maintenance",
-    image: "/images/services/inspection.webp",
-  },
-  {
-    title: "Equipment Calibration",
-    description:
-      "Precision calibration services to keep diagnostic devices compliant with strict manufacturer and industry regulatory standards.",
-    name: "Equipment Calibration",
+      "Professional calibration services that help ensure the accuracy, reliability, and compliance of your medical, dental, and laboratory equipment.",
+    name: "Calibration Services",
     image: "/images/services/calibration.webp",
   },
   {
-    title: "Repair & Corrective Maintenance",
+    title: "Preventive Maintenance Services",
     description:
-      "Expert diagnostic and restoration services for failing clinical equipment, using high-quality parts to restore your devices to factory specifications.",
-    name: "Repair & Corrective Maintenance",
+      "Planned maintenance to help keep your equipment reliable, functional, and ready for continued operation.",
+    name: "Preventive Maintenance Services",
+    image: "/images/services/inspection.webp",
+  },
+  {
+    title: "Repair Services",
+    description:
+      "Reliable diagnostic and repair solutions to restore the performance and functionality of your medical, dental, and laboratory equipment.",
+    name: "Repair Services",
     image: "/images/services/repair.webp",
   },
   {
-    title: "Equipment Supply & Installation",
+    title: "Equipment Rental Services",
     description:
-      "Complete supply and professional installation of advanced diagnostic imaging systems, including MRI, CT scans, and Ultrasound machines, tailored to facility specifications.",
+      "Flexible rental solutions for medical, dental, and laboratory equipment, providing healthcare facilities with reliable equipment access for temporary needs, replacement, backup, or specialized applications.",
     name: "Equipment Supply & Installation",
-    image: "/images/services/training.webp",
+    image: "/images/services/ventilator.jpg",
   },
   {
-    title: "Radiological Performance Testing",
+    title: "Biomedical Training and Consultancy",
     description:
-      "Rigorous performance testing for radiological equipment and accessories. Verifies image quality, output accuracy, and operational safety to meet healthcare quality standards.",
-    name: "Radiological Performance Testing",
-    image: "/images/place-holder.webp",
-  },
-  {
-    title: "Biomedical Training & Consultancy",
-    description:
-      "Specialized technical training and advisory services for healthcare personnel  to optimize equipment operation, care, and safety protocols.",
-    name: "Biomedical Training & Consultancy",
-    image: "/images/place-holder.webp",
+      "Practical technical training for healthcare personnel on the proper operation, handling, care, and basic troubleshooting of medical, dental, and laboratory equipment to promote safe, effective, and reliable equipment use.",
+    name: "Biomedical Training and Consultancy",
+    image: "/images/services/training.jpg",
   },
 ];
 

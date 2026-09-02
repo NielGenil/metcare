@@ -18,12 +18,8 @@ function Footer() {
             Biomedical Corporation
           </p>
 
-          <p className="mt-6 leading-7">
-            Precision in every measure.
-          </p>
-          <p className="leading-7">
-            Trust in every result.
-          </p>
+          <p className="mt-6 leading-7">Precision in every measure.</p>
+          <p className="leading-7">Trust in every result.</p>
         </div>
 
         {/* Quick Links */}
@@ -65,8 +61,7 @@ function Footer() {
             <li>Calibration Services</li>
             <li>Preventive Maintenance Services</li>
             <li>Repair Services</li>
-            <li>Sales and Rentals</li>
-            <li>Services of Biomedical Equipments</li>
+            <li>Sales and Rentals Services of Biomedical Equipments</li>
           </ul>
         </div>
 
@@ -81,9 +76,8 @@ function Footer() {
             </h3>
           </div>
           <ul className="mt-6 space-y-5">
-            <li>Equipment</li>
-            <li>Equipment Parts and Accessories</li>
-            <li>Medical Supplies</li>
+            <li>Medical</li>
+            <li>Dental and Laboratory Equipment</li>
           </ul>
         </div>
 

@@ -6,19 +6,19 @@ const servicesHome = [
   {
     title: "Biomedical Engineering",
     description:
-      "Specialized installation, maintenance, and repair for medical, dental, and lab equipment. Reliable. Compliant. Built for optimal performance.",
+      "Comprehensive engineering support for medical, dental, and laboratory equipment—from installation and technical assessment to maintenance and service support.",
     icon: IoMdSettings,
   },
   {
     title: "Calibration Services",
     description:
-      "Expert testing and adjustments to keep your critical medical devices accurate, safe, and audit-ready every time.",
+      "Professional calibration services that help ensure the accuracy, reliability, and compliance of your medical, dental, and laboratory equipment.",
     icon: FaDraftingCompass,
   },
   {
     title: "Training Consultancy",
     description:
-      "Professional training and guidance for biomedical equipment operations to maximize safety and ensure efficiency.",
+      "Professional training and technical guidance to support the safe, effective, and proper operation of biomedical equipment.",
     icon: BsFillClipboard2CheckFill,
   },
 ];

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
-import otherServices from "../../data/otherServices";
+import {otherServices, osmosis} from "../../data/otherServices";
 
 function OtherServicesSection() {
   return (
@@ -20,7 +20,7 @@ function OtherServicesSection() {
           />
         </motion.div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
+        <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
           {otherServices.map((service) => {
             return (
               <div
@@ -29,7 +29,53 @@ function OtherServicesSection() {
                 // whileInView={{ opacity: 1, y: 0 }}
                 // viewport={{ once: true }}
                 // transition={{ duration: 0.6 }}
-                className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
+              >
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  width={640}
+                  height={256}
+                  className="h-64 w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold">{service.title}</h3>
+
+                  <p className="mt-3 text-slate-600">{service.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
+            title="Reverse Osmosis Consumables"
+            description="High-quality replacement filters and membranes to maintain the purity and efficiency of your medical-grade Reverse Osmosis water systems."
+          />
+        </motion.div>
+
+        <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
+          {osmosis.map((service) => {
+            return (
+              <div
+                key={service.title}
+                // initial={{ opacity: 0, y: 30 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // viewport={{ once: true }}
+                // transition={{ duration: 0.6 }}
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white w-[380px] transition hover:-translate-y-2 hover:shadow-xl"
               >
                 <img
                   src={service.image}

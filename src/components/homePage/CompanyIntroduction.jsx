@@ -18,7 +18,9 @@ function CompanyIntroduction() {
             <SectionHeader
               badge="About Us"
               title="Trusted Biomedical Engineering Partner"
-              description="Since establishment in 2015, Metcare Biomedical Corporation has been providing biomedical services such as calibration, preventive maintenance and repair of medical dental and laboratory equipment."
+              description="METCARE Biomedical Corporation provides reliable technical solutions that help healthcare facilities maintain the accuracy,
+safety, and performance of their equipment. Our services support medical, dental, and laboratory facilities through
+professional calibration, preventive maintenance, and repair."
               center={false}
             />
           </motion.div>

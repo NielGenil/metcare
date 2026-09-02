@@ -17,12 +17,12 @@ function Services() {
           <SectionHeader
             badge="Our Services"
             title="Complete biomedical care maintenance, calibration, and support to keep your equipment reliable."
-            description="We provide preventive maintenance, calibration, repair, and installation to help healthcare facilities keep their medical equipment operating safely and efficiently."
+            description="We provide calibration, preventive maintenance, repair, biomedical equipment rental services and sales of biomedical supplies and equipment."
           />
         </motion.div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
-          {servicesHome.slice(0, 3).map((service) => {
+        <div className="mt-14 flex flex-wrap justify-center gap-8 mb-10">
+          {servicesHome.map((service) => {
             const Icon = service.icon;
             return (
               <motion.div
@@ -31,7 +31,7 @@ function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="rounded-2xl bg-white border border-gray-200 p-8 transition hover:-translate-y-2 hover:shadow-xl"
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white max-w-[380px] p-8 transition hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="inline-flex rounded-xl bg-green-100 p-4 text-2xl text-green-600">
                   <Icon />
