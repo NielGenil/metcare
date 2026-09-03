@@ -35,14 +35,16 @@ export function adminEmail({
 <tr>
 <td style="padding:44px 48px 28px;">
 <table width="100%" cellpadding="0" cellspacing="0">
+<!-- Header -->
 <tr>
-<td>
-<img
-src="https://metcare-nine.vercel.app/logo.jpg"
-width="150"
-alt="Metcare"
-/>
-</td>
+  <td style="padding:44px 48px 28px;text-align:center;">
+    <img
+      src="./public/logo.jpg"
+      width="150"
+      alt="Metcare"
+      style="display:block;margin:0 auto;"
+    />
+  </td>
 </tr>
 </table>
 </td>
