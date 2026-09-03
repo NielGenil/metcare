@@ -37,10 +37,10 @@ export function adminEmail({
 <table width="100%" cellpadding="0" cellspacing="0">
 <!-- Header -->
 <tr>
-  <td style="padding:44px 48px 28px;text-align:center;">
+  <td style="text-align:center;">
     <img
       src="https://metcare-nine.vercel.app/assets/logo-BqK5G03e.jpg"
-      width="150"
+      width="180"
       alt="Metcare"
       style="display:block;margin:0 auto;"
     />
