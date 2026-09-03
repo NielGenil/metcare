@@ -39,7 +39,7 @@ export function adminEmail({
 <tr>
   <td style="padding:44px 48px 28px;text-align:center;">
     <img
-      src="./public/logo.jpg"
+      src="/logo.jpg"
       width="150"
       alt="Metcare"
       style="display:block;margin:0 auto;"
