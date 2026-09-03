@@ -114,7 +114,7 @@ function Contact() {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          title="Metcare Location"
+          title="METCARE Location"
         />
       </div>
 

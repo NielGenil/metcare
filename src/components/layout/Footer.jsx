@@ -76,8 +76,7 @@ function Footer() {
             </h3>
           </div>
           <ul className="mt-6 space-y-5">
-            <li>Medical</li>
-            <li>Dental and Laboratory Equipment</li>
+            <li>Medical Dental and Laboratory Equipment</li>
           </ul>
         </div>
 
@@ -117,7 +116,7 @@ function Footer() {
       </div>
 
       <div className="py-6 text-center text-white text-sm bg-[#005a2b] border-t border-green-900">
-        © {new Date().getFullYear()} Metcare. All rights reserved.
+        © {new Date().getFullYear()} METCARE. All rights reserved.
       </div>
       {/* <div className="h-5 w-full bg-slate-100" /> */}
     </footer>
