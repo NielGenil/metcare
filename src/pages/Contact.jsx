@@ -29,13 +29,19 @@ function Contact() {
   const [turnstileToken, setTurnstileToken] = useState("");
 
   function handleChange(e) {
+    const { name, value } = e.target;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
-    
-    if (formData.category === "Complaint") {
-      setAnonymous(true);
+
+    if (name === "category") {
+      if (value === "Complaint") {
+        setAnonymous(true);
+      } else {
+        setAnonymous(false);
+      }
     }
   }
 
