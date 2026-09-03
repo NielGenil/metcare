@@ -34,7 +34,7 @@ alt="Metcare"
 />
 </td>
 <td align="right" style="font-size:12px;color:#a3a3a3;">
-New Website Inquiry
+// New Website Inquiry
 </td>
 </tr>
 </table>
