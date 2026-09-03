@@ -76,14 +76,14 @@ export default async function handler(req, res) {
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(email)) {
-      return res.status(400).json({
-        success: false,
-        message: "Please enter a valid email address.",
-      });
-    }
+    // if (!emailRegex.test(email)) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "Please enter a valid email address.",
+    //   });
+    // }
 
     // Turnstile token
     if (!turnstileToken) {
