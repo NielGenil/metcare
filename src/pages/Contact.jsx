@@ -16,10 +16,13 @@ function Contact() {
   const [website, setWebsite] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [isAnonymous, setAnonymous] = useState(true);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
+    category: "Inquiry",
     message: "",
   });
 
@@ -30,6 +33,10 @@ function Contact() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    
+    if (formData.category === "Complaint") {
+      setAnonymous(true);
+    }
   }
 
   async function handleSubmit(e) {
@@ -47,12 +54,21 @@ function Contact() {
         },
         body: JSON.stringify({
           ...formData,
+          isAnonymous,
           turnstileToken,
           website,
         }),
       });
 
-      const data = await response.json();
+      const responseText = await response.text();
+
+      let data = {};
+
+      try {
+        data = responseText ? JSON.parse(responseText) : {};
+      } catch {
+        data = {};
+      }
 
       if (!response.ok) {
         if (response.status === 429) {
@@ -61,7 +77,10 @@ function Contact() {
           );
         }
 
-        throw new Error(data.message || "Something went wrong.");
+        throw new Error(
+          data.message ||
+            `Server error (${response.status}). Please try again.`,
+        );
       }
 
       alert("Message sent successfully!");
@@ -70,6 +89,7 @@ function Contact() {
         name: "",
         email: "",
         subject: "",
+        category: "Inquiry",
         message: "",
       });
 
@@ -186,33 +206,105 @@ function Contact() {
                   className="hidden"
                 />
 
-                <Input
-                  disabled={isSubmitting}
-                  label="Full Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="John Doe"
-                />
+                <div className="space-y-2">
+                  <label
+                    htmlFor="category"
+                    className="block font-medium text-slate-700"
+                  >
+                    Type of Concern
+                  </label>
 
-                <Input
-                  disabled={isSubmitting}
-                  label="Email Address"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="john@example.com"
-                />
+                  <select
+                    id="category"
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                    className="w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none transition focus:border-green-600 focus:ring-1 focus:ring-green-600 disabled:cursor-not-allowed disabled:bg-slate-100"
+                  >
+                    <option value="Inquiry">Inquiry</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+                  </select>
+                </div>
+                {formData.category === "Complaint" && (
+                  <div className="flex gap-2">
+                    <input
+                      type="checkbox"
+                      name="anonymous"
+                      checked={isAnonymous}
+                      onChange={(e) => setAnonymous(e.target.checked)}
+                    />
+                    <label className="block font-medium text-slate-700">
+                      Remain Anonymous
+                    </label>
+                  </div>
+                )}
 
-                <Input
-                  disabled={isSubmitting}
-                  label="Number"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="e.g. XXX-XXXX-XXX"
-                />
+                {formData.category !== "Complaint" ? (
+                  <>
+                    <Input
+                      disabled={isSubmitting}
+                      label="Full Name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                    />
+
+                    <Input
+                      disabled={isSubmitting}
+                      label="Email Address"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                    />
+
+                    <Input
+                      disabled={isSubmitting}
+                      label="Number"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="e.g. XXX-XXXX-XXX"
+                    />
+                  </>
+                ) : (
+                  formData.category === "Complaint" &&
+                  !isAnonymous && (
+                    <>
+                      <Input
+                        disabled={isSubmitting}
+                        label="Full Name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="John Doe"
+                      />
+
+                      <Input
+                        disabled={isSubmitting}
+                        label="Email Address"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="john@example.com"
+                      />
+
+                      <Input
+                        disabled={isSubmitting}
+                        label="Number"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="e.g. XXX-XXXX-XXX"
+                      />
+                    </>
+                  )
+                )}
 
                 <Textarea
                   disabled={isSubmitting}

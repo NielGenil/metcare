@@ -25,7 +25,16 @@ export default async function handler(req, res) {
         "127.0.0.1";
 
     // Get form data
-    const { name, email, subject, message, turnstileToken, website } = req.body;
+    const {
+      name,
+      email,
+      subject,
+      category,
+      message,
+      isAnonymous,
+      turnstileToken,
+      website,
+    } = req.body;
 
     if (website) {
       return res.status(200).json({
@@ -72,6 +81,15 @@ export default async function handler(req, res) {
       return res.status(400).json({
         success: false,
         message: "Message fields are required.",
+      });
+    }
+
+    const allowedCategories = ["Complaint", "Feedback", "Inquiry"];
+
+    if (!allowedCategories.includes(category)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid type of concern.",
       });
     }
 
@@ -135,12 +153,14 @@ export default async function handler(req, res) {
       from: "Metcare <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
-      subject: `New Inquiry: ${subject}`,
+      subject: `${category} message from Website`,
       html: adminEmail({
         name,
         email,
         subject,
+        category,
         message,
+        isAnonymous,
       }),
     });
 
