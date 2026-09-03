@@ -40,7 +40,7 @@ export function adminEmail({
   <td style="text-align:center;">
     <img
       src="https://metcare-nine.vercel.app/assets/logo-BqK5G03e.jpg"
-      width="180"
+      width="210"
       alt="Metcare"
       style="display:block;margin:0 auto;"
     />
