@@ -1,9 +1,19 @@
-export function adminEmail({ name, email, subject, message }) {
+export function adminEmail({
+  name,
+  email,
+  subject,
+  category,
+  message,
+  isAnonymous,
+}) {
   const date = new Date().toLocaleString("en-PH", {
     dateStyle: "full",
     timeStyle: "short",
     timeZone: "Asia/Manila",
   });
+
+  const showContactDetails =
+    category !== "Complaint" || !isAnonymous;
 
   return `
 <!DOCTYPE html>
@@ -33,9 +43,6 @@ width="150"
 alt="Metcare"
 />
 </td>
-<td align="right" style="font-size:12px;color:#a3a3a3;">
-// New Website Inquiry
-</td>
 </tr>
 </table>
 </td>
@@ -45,13 +52,17 @@ alt="Metcare"
 <td style="padding:0 48px 44px;border-top:1px solid #eeeeee;">
 
 <h1 style="margin:36px 0 10px;font-size:19px;font-weight:600;color:#111111;">
-You've received a new message
+${category} message from Website
 </h1>
+
 <p style="margin:0 0 36px;font-size:14px;line-height:1.6;color:#767676;">
 A visitor submitted the contact form on your website. Details are below.
 </p>
 
-<!-- Details -->
+${
+  showContactDetails
+    ? `
+<!-- Contact Details -->
 <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;margin-bottom:36px;">
 
 <tr>
@@ -70,11 +81,22 @@ A visitor submitted the contact form on your website. Details are below.
 </tr>
 
 </table>
+`
+    : `
+<!-- Anonymous Notice -->
+<div style="margin-bottom:36px;padding:16px 20px;background:#f8f8f8;border-left:2px solid #0F7B43;">
+<p style="margin:0;font-size:13px;color:#666666;">
+This complaint was submitted anonymously.
+</p>
+</div>
+`
+}
 
 <!-- Message -->
 <div style="font-size:12px;color:#a3a3a3;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px;">
 Message
 </div>
+
 <div style="font-size:14px;line-height:1.8;color:#333333;padding:24px 28px;border-left:2px solid #0F7B43;background:#fafafa;">
 ${message.replace(/\n/g, "<br>")}
 </div>
