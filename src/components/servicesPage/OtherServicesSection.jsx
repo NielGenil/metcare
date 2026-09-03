@@ -61,8 +61,8 @@ function OtherServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <SectionHeader
-            title="Reverse Osmosis Consumables"
-            description="High-quality replacement filters and membranes to maintain the purity and efficiency of your medical-grade Reverse Osmosis water systems."
+            title="Reverse Osmosis"
+            description="Reverse Osmosis System installation, repair, preventive maintenance, and supply of consumables."
           />
         </motion.div>
 

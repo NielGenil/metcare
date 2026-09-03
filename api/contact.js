@@ -68,10 +68,10 @@ export default async function handler(req, res) {
     }
 
     // Required fields
-    if (!name || !email || !subject || !message) {
+    if (!message) {
       return res.status(400).json({
         success: false,
-        message: "All fields are required.",
+        message: "Message fields are required.",
       });
     }
 

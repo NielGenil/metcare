@@ -39,24 +39,24 @@ export const otherServices = [
 
 export const osmosis = [
   {
-    title: "Reverse Osmosis Membrane",
+    title: "Reverse Osmosis Systems",
     description:
-      "High-grade replacement membranes designed to efficiently remove dissolved solids and contaminants, ensuring ultra-pure medical water.",
-    name: "Reverse Osmosis Membrane",
-    image: "/images/services/membrane.jpg",
+      "Complete turnkey solutions including professional installation, system repair, and scheduled preventive maintenance for medical-grade Reverse Osmosis units.",
+    name: "RO Systems & Field Services",
+    image: "/images/services/ro-system.jpg",
   },
   {
-    title: "Reverse Osmosis Sediment Filter",
+    title: "RO Filtration Consumables",
     description:
-      "Reliable replacement filters that trap dirt, rust, and fine particles to protect your purification system from premature wear.",
-    name: "Reverse Osmosis Sediment Filter",
-    image: "/images/services/filter.jpg",
+      "High-purity replacement supplies including Reverse Osmosis Membranes, Sediment Filters, and Bacteria Filters to ensure optimal water quality.",
+    name: "RO Filtration Consumables",
+    image: "/images/services/consumables.jpg",
   },
   {
-    title: "Reverse Osmosis Bacteria Filter",
+    title: "Industrial Salt & Spare Parts",
     description:
-      "Advanced replacement filtration engineered to eliminate bacteria and microorganisms, ensuring safe, sterile water for clinical use.",
-    name: "Reverse Osmosis Bacteria Filter",
-    image: "/images/services/osmosis.webp",
+      "Essential maintenance supplies including high-grade industrial salt for water softening, plus durable replacement components like filter housings.",
+    name: "Industrial Salt & Spare Parts",
+    image: "/images/services/other-consumables.jpg",
   },
 ];
